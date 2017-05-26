@@ -9,11 +9,5 @@ topnav_dropdowns:
   folders:
     - title: External Links
       folderitems:        
-        - title: External Link 1
-          external_url: http://www.google.com/
-        - title: External Link 2
-          external_url: http://www.yahoo.com/        
-    - title: Capability Packs
-      folderitems:
-        - title: Capability One
-          url: capability_one.html
+        - title: Gov.uk - Review of data security, consent and opt-outs
+          external_url: https://www.gov.uk/government/publications/review-of-data-security-consent-and-opt-outs    

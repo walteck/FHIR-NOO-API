@@ -52,31 +52,13 @@ entries:
     - title: Overview | Profiles
       url: /restfulapis.html
       output: web
-      subfolders:
-      - title: Identification
+      subfolders:         
+      - title: Foundation
         output: web
         subfolderitems:
-          - title: Location
-            url: /restfulapis_identification_location.html  
-            output: web          
-          - title: Organisation
-            url: /restfulapis_identification_organisation.html
-            output: web
-          - title: Patient
-            url: /restfulapis_identification_patient.html
-            output: web
-          - title: Practitoner
-            url: /restfulapis_identification_practitoner.html  
-            output: web          
-      - title: Workflow
-        output: web
-        subfolderitems:
-          - title: Encounter
-            url: /restfulapis_workflow_encounter.html  
-            output: web          
-          - title: Flag
-            url: /restfulapis_workflow_flag.html
-            output: web
+        - title: Consent
+          url: /restfulapis_foundation_consent.html  
+          output: web          
             
     - title: API Foundations
       url: /foundations.html

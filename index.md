@@ -46,6 +46,4 @@ We'll be developing a range of products and materials in collaboration with heal
 
 # Using this guide #
 
-Example external link to [Google](http://www.google.com).
-
 {% include contribute.html content="To get involved......" %}
