@@ -34,7 +34,7 @@ entries:
       output: web
       subfolders:
     - title: Using Profiles
-      url: /engage_using_profiles.html
+      url: /engage_using_profile.html
       output: web
       subfolders:
     - title: Proof of Concepts
