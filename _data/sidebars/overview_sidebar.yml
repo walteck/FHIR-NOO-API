@@ -15,7 +15,7 @@ entries:
     - title: Development Roadmap
       url: /design_development_roadmap.html
       output: web
-    - title: Care Connect Versioning
+    - title: Versioning
       url: /design_product_versioning.html
       output: web
     - title: Glossary
