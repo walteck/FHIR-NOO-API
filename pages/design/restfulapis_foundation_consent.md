@@ -9,46 +9,97 @@ summary: A record of a healthcare consumer’s policy choices, which permits or 
 {% include custom/search.warnbanner.html %}
 {% include custom/profile.html content="[Consent](https://fhir.nhs.uk/StructureDefinition/NationalOptOut-Consent-1.html)" %}
 
-## 1. Read ##
+## 1. Create ##
+
+New National Opt-Out records are captured using the FHIR `Consent` resource.
+
+<div markdown="span" class="alert alert-success" role="alert">
+POST https://fhir.nhs.uk/structureDefinition/Consent</div>
+
+
+## 2. Read ##
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET https://fhir.nhs.uk/structureDefinition/Consent/[id]</div>
 
-Return a single `Consent` record for the specified logicalid.
+Return a single `Consent` record for the specified logical ID (Not the NHS Number). 
 
-## 2. Search Parameters ##
+## 3. Search Parameters ##
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET https://fhir.nhs.uk/structureDefinition/Consent?[searchParameters]</div>
-
-Search for consent records based on specified parameters. Fetches a bundle of all `Consent` resources for the specified parameters. ***HOW WILL SEARCHES BE PERFORMED?? What Key ?***
+GET /Consent/[searchParameters]</div>
+Consent contains the patients opt-out preferences for the National Opt-Out Programme. Returns a bundle or single `Consent` resource for the specified patient or search criteria.
 
 {% include custom/moscow.html content="[Consent](https://www.hl7.org/fhir/consent.html#search)" %}
 
 | Name | Type | Description | Conformance | Path |
-|------|------|-------------|-------------|------|
-| `patient` | `reference` | Who the sensitivity is for | SHALL | AllergyIntolerance.patient<br>(Patient) |
-| `status` | `token` | Status of AllergyIntolerance	| Y | AllergyIntolerance.status |
+|------|------|-------------|-------|------|
+| `id` | `identifier` | Logical ID assigned to the consent record. |  | Consent.id |
+| `status` | `code` | Current consent status |  | Consent.status |
+| `patient` | `Reference` | Reference used to identify the patient, typically an NHS number |  | Consent.patient |
 
-{% include custom/search.patient.html para="2.1." content="Consent" %}
+{% include custom/search.token1.html para="2.1." base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content="id" text1="347" %}
 
-{% include custom/search.status.html para="2.2." content="AllergyIntolerance" options="active | unconfirmed | confirmed | inactive | resolved | refuted | entered-in-error" selected="refuted" %}
+## 4. History ##
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET /Consent/_history/[searchParameters]</div>
+
+***Update when decision on history has been made***
 
 ## 3. Example ##
 
-### 3.1 Request Query ###
+Place a consent record onto the National Opt-Out register (Spine Clinical Database)
 
-Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Consent xmlns="http://hl7.org/fhir">
+	<id value="783ffeef-538e-4a17-bed2-983a382ccdd7"/>
+	<status value="active"/>
+    <patient>
+    	<reference value="https://nww.spine.nhs.uk/4505577104"/> 
+    </patient>
+    <dateTime value="2017-02-01T11:15:33+00:00"/>
+    <consentingParty>
+    	<reference value="https://nww.spine.nhs.uk/4505577104"/>
+    </consentingParty>
+    <actor>
+        <role>
+            <coding>
+                <system value="http://hl7.org/fhir/v3/ParticipationType"/>
+                <code value="INF"/> 
+            </coding>
+        </role>
+        <reference>
+            <reference value="Practitioner/5679"/>
+        </reference>
+    </actor>
+    <policyRule value="http://hl7.org/fhir/ConsentPolicy/opt-out"/>
+    <purpose> 
+        <system value="http://hl7.org/fhir/v3/ActReason"/> 
+        <code value="HRESCH"/>
+        <display value="healthcare research"/>
+    </purpose>
+    <purpose> 
+        <system value="http://hl7.org/fhir/v3/ActReason"/> 
+        <code value="HOPERAT"/> 
+        <display value="healthcare operations"/>
+    </purpose>
+</Consent>
+```
+
+### 3.1 Request Query ###
+Return all Patient resources with a NHS Number 9876543210, the format of the response body will be xml. Replace 'baseUrl' with the actual base Url of the FHIR Server.
 
 #### 3.1.1. cURL ####
 
-{% include custom/embedcurl.html title="Search AllergyIntolerance" command="curl -X GET  'http://[baseUrl]/AllergyIntolerance?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
+{% include custom/embedcurl.html title="Search Patient" command="curl -X GET  'http://[baseUrl]/Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|9876543210&_format=xml'" %}
 
 ### 3.2 Response Headers ###
 
 | Status Code |
 |----------------|
-|200 |
+|201 | Created
 
 | Header | Value |
 |-----------------|---------|
@@ -58,61 +109,75 @@ Return all AllergyIntolerance resources for Patient with a NHS Number of 9876543
 
 ```xml
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="d29a6ee3-f1dc-490f-9fc0-e9e6643f84b5"/>
+    <id value="aa167489-c554-42f6-bfdd-53227ff1faad"/>
     <meta>
-        <lastUpdated value="2017-05-25T09:05:33.538-04:00"/>
+        <lastUpdated value="2017-05-26T05:39:27.492-04:00"/>
     </meta>
     <type value="searchset"/>
     <total value="1"/>
     <link>
         <relation value="self"/>
-        <url value="http://fhirtest.uhn.ca/baseDstu2/AllergyIntolerance?_format=xml&amp;patient=https%3A%2F%2Fpds.proxy.nhs.uk%2FPatient%2F9876543210"/>
+        <url value="http://fhirtest.uhn.ca/baseDstu2/Patient?_format=xml&amp;identifier=https%3A%2F%2Ffhir.nhs.uk%2FId%2Fnhs-number%7C9876543210"/>
     </link>
     <entry>
-        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/AllergyIntolerance/32503"/>
+        <fullUrl value="http://fhirtest.uhn.ca/baseDstu2/Patient/32898"/>
         <resource>
-            <AllergyIntolerance xmlns="http://hl7.org/fhir">
-                <id value="32503"/>
+            <Patient xmlns="http://hl7.org/fhir">
+                <id value="32898"/>
                 <meta>
                     <versionId value="1"/>
-                    <lastUpdated value="2017-05-25T09:01:25.409-04:00"/>
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-AllergyIntolerance-1"/>
+                    <lastUpdated value="2017-05-26T05:39:03.280-04:00"/>
+                    <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-Patient-1"/>
                 </meta>
-                <identifier>
-                    <system value="https://epr.jorvik.nhk.uk/AllergyIntolerance "/>
-                    <value value="49476534"/>
-                </identifier>
-                <recordedDate value="2014-10-09T14:58:00+11:00"/>
-                <recorder>
-                    <reference value="https://sds.proxy.nhs.uk/Practitioner/G8133438"/>
-                </recorder>
-                <patient>
-                    <reference value="https://pds.proxy.nhs.uk/Patient/9876543210"/>
-                </patient>
-                <substance>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="226017009"/>
-                        <display value="Bombay mix"/>
-                    </coding>
-                </substance>
-                <status value="confirmed"/>
-                <criticality value="CRITH"/>
-                <type value="allergy"/>
-                <category value="food"/>
-                <lastOccurence value="2012-06"/>
-                <reaction>
-                    <manifestation>
+                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-EthnicCategory-1">
+                    <valueCodeableConcept>
                         <coding>
-                            <system value="http://snomed.info/sct"/>
-                            <code value="39579001"/>
-                            <display value="Anaphylactic reaction"/>
+                            <system value="https://fhir.hl7.org.uk/CareConnect-EthnicCategory-1"/>
+                            <code value="01"/>
+                            <display value="British, Mixed British"/>
                         </coding>
-                    </manifestation>
-                    <onset value="2012-06-12"/>
-                    <severity value="severe"/>
-                </reaction>
-            </AllergyIntolerance>
+                    </valueCodeableConcept>
+                </extension>
+                <identifier>
+                    <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="https://fhir.hl7.org.uk/CareConnect-NHSNumberVerificationStatus-1"/>
+                                <code value="01"/>
+                                <display value="Number present and verified"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <system value="https://fhir.nhs.uk/Id/nhs-number"/>
+                    <value value="9876543210"/>
+                </identifier>
+                <active value="true"/>
+                <name>
+                    <use value="usual"/>
+                    <family value="Kanfeld"/>
+                    <given value="Bernie"/>
+                    <prefix value="Miss"/>
+                </name>
+                <gender value="female"/>
+                <birthDate value="1998-03-19"/>
+                <address>
+                    <use value="home"/>
+                    <line value="10, Field Jardin"/>
+                    <line value="Long Eaton"/>
+                    <city value="Nottingham"/>
+                    <postalCode value="NG10 1ZZ"/>
+                </address>
+                <maritalStatus>
+                    <coding>
+                        <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
+                        <code value="S"/>
+                    </coding>
+                </maritalStatus>
+                <managingOrganization>
+                    <reference value="https://sds.proxy.nhs.uk/Organization/C81010"/>
+                    <display value="Moir Medical Centre"/>
+                </managingOrganization>
+            </Patient>
         </resource>
         <search>
             <mode value="match"/>

@@ -1,0 +1,12 @@
+<h3 id="identifier">{{include.para}} {{include.content}}</h3>
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET {{include.base}}{{include.resource}}/[id]</div>
+
+<p>See <a href="https://www.hl7.org/fhir/searchparameter-registry.html">token</a> for details on this parameter.</p>
+
+<div class="language-http highlighter-rouge">
+<pre class="highlight"><code><span class="err">GET {{include.base}}{{include.resource}}/347
+</span></code>
+Return {{include.resource}} resource that has a {{include.content}} value of {{include.text1}}.</pre>
+</div>
