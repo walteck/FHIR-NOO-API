@@ -15,7 +15,7 @@ entries:
     - title: Development Roadmap
       url: /design_development_roadmap.html
       output: web
-    - title: Versioning
+    - title: Care Connect Versioning
       url: /design_product_versioning.html
       output: web
     - title: Glossary
@@ -34,7 +34,7 @@ entries:
       output: web
       subfolders:
     - title: Using Profiles
-      url: /engage_using_profile.html
+      url: /engage_using_profiles.html
       output: web
       subfolders:
     - title: Proof of Concepts
@@ -53,13 +53,21 @@ entries:
       url: /restfulapis.html
       output: web
       subfolders:         
-      - title: Foundation
+      - title: Profile | Consent
         output: web
         subfolderitems:
-        - title: Consent
+        - title: Consent Overview
           url: /restfulapis_foundation_consent.html  
-          output: web          
-            
+          output: web
+        - title: Logical ID
+          url: /consent_id.html  
+          output: web
+        - title: Status
+          url: /restfulapis_foundation_consent_status.html  
+          output: web 
+        - title: Patient
+          url: /restfulapis_foundation_consent_patient.html  
+          output: web 
     - title: API Foundations
       url: /foundations.html
       output: web
@@ -91,12 +99,29 @@ entries:
     - title: Overview | Coming soon
       url: /support_coming_soon.html
       output: web
+      
   - title: Test
     output: web
     folderitems:
-    - title: Overview | Coming soon
-      url: /support_coming_soon.html
+    - title: Overview
+      url: /test_overview.html
       output: web
+    - title: Test Scenarios
+      url: /test_scenarios.html
+      output: web  
+    - title: Test Data
+      url: /test_data.html
+      output: web  
+    - title: User Acceptance Testing (UAT)
+      url: /test_uat.html
+      output: web  
+    - title: Security Testing
+      url: /test_security.html
+      output: web
+    - title: FHIR Server Tests
+      url: /test_fhir_server.html
+      output: web  
+      
   - title: Accredit
     output: web
     folderitems:
@@ -110,6 +135,16 @@ entries:
       url: /support_coming_soon.html
       output: web
 
+    - title: Deploy
+    output: web
+    folderitems:
+    - title: Pilot
+      url: /deploy_pilot.html
+      output: web
+    - title: Live
+      url: /deploy_live.html
+      output: web
+      
   - title: Help & Support
     output: web
     folderitems:
@@ -118,8 +153,8 @@ entries:
       output: web
     - title: Communication Channels
       url: /support_communications.html
-      output: web
-
+      output: web    
+      
   - title: Tags
     output: web
     folderitems:
