@@ -53,7 +53,7 @@ entries:
       url: /restfulapis.html
       output: web
       subfolders:         
-      - title: Profile | Consent
+      - title: FHIR&reg; Profile | Consent
         output: web
         subfolderitems:
         - title: Consent Overview
@@ -62,12 +62,54 @@ entries:
         - title: Logical ID
           url: /consent_id.html  
           output: web
-        - title: Status
-          url: /restfulapis_foundation_consent_status.html  
+        - title: status
+          url: /consent_status.html  
           output: web 
-        - title: Patient
-          url: /restfulapis_foundation_consent_patient.html  
+        - title: category
+          url: /consent_category.html  
           output: web 
+        - title: patient
+          url: /consent_patient.html  
+          output: web
+        - title: period
+          url: /consent_period.html  
+          output: web
+        - title: dateTime
+          url: /consent_datetime.html  
+          output: web
+        - title: consentingParty
+          url: /consent_consenting_party.html  
+          output: web
+        - title: actor
+          url: /consent_actor.html  
+          output: web
+        - title: action
+          url: /consent_action.html  
+          output: web
+        - title: organization
+          url: /consent_organization.html  
+          output: web
+        - title: source
+          url: /consent_source.html  
+          output: web
+        - title: policy
+          url: /consent_policy.html  
+          output: web
+        - title: authority
+          url: /consent_authority.html  
+          output: web
+        - title: uri
+          url: /consent_uri.html  
+          output: web
+        - title: policyRule
+          url: /consent_policyrule.html  
+          output: web
+        - title: securityLabel
+          url: /consent_securitylabel.html  
+          output: web
+        - title: purpose
+          url: /consent_purpose.html  
+          output: web
     - title: API Foundations
       url: /foundations.html
       output: web
