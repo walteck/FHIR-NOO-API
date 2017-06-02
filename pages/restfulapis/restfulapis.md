@@ -13,7 +13,6 @@ summary: Overview
 
 ## Foundation ##
 
-
 | Individuals  | Groups &amp; Entities       |
 |--------------|--------------|
 | [Consent ](restfulapis_foundation_consent.html)   
