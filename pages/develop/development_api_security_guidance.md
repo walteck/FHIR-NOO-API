@@ -45,10 +45,6 @@ After consultation with the Infrastructure Security, Operational Security and Sp
 
 Please see the [Tomcat Config HTTP SSL Support](https://tomcat.apache.org/tomcat-8.0-doc/config/http.html#SSL_Support) webpage for more details.
 
-## JSON Web Token (JWT)
-
-{% include todo.html content="Coming Soon..." %}
-
 ## Client Certificates (TLSMA) ##
 
 {% include todo.html content="Coming Soon..." %}
