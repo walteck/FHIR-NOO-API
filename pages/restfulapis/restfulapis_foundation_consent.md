@@ -38,7 +38,6 @@ Consent contains the patients opt-out preferences for the National Opt-Out Progr
 | `status` | `code` | Current consent status |  | Consent.status |
 | `patient` | `Reference` | Reference used to identify the patient, typically an NHS number |  | Consent.patient |
 
-{% include custom/search.token1.html para="2.1." base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content="id" text1="347" %}
 
 ## 4. History ##
 

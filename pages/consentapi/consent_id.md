@@ -16,157 +16,37 @@ This specification describes a single use case.
 
 ### Element Usage ###
 
-Care Connect uses the Patient.Identifier element and creates two independent sliced elements that can capture a patients identifier as either a national identifier (NHS Number) or an alternative local identifier.
+National Opt-Out uses the Consent.id element to allocate a unique identification code to each consent record that is created.
 
-### NHS Number Identifier ###
+### Logical id ###
 
-|Type|name|Data Type|Description|
+|Name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
-| Slice| identifier| Identifier | A unique national and/or local identifier for a patient |
-|Complex| identifier#1 [nhsNumber]|Identifier| The patient NHS Number.|
-|Extension|nhsNumberVerificationStatus|CodeableConcept| An extension with a required valueset that determines the status of the NHS number allocated to the patient.|
+|id| Identifier | A unique logical identifier allocated by the National Opt-Out model.|
 
-- 'nhsNumber' **MUST** be used where available. This is the primary identifier for a patient registered with a GP practice geographically located in England, Wales or Northern Ireland.
-- The NHS number **MUST** consist of a 10 digit numeric value.
-- Hyphenation in the number **MUST NOT** be used.
-- Spaces between numbers **MUST NOT** be stored.
-- The namespace for the `nhsNumber` MUST be defined as http://fhir.nhs.net/Id/nhs-number
-- The `nhsNumber` MUST be stored as a string value
-- A local identifier **MAY** be used in addition to the NHS number.
+- 'id' **MUST** be used to identify a consent record. This is the primary identifier for a patients consent preferences.
 
-### NHS Number Verification Status ###
-
-CareConnect NhsNumberVerificationStatus extension profile:
-
-```http
-http://hl7.org.uk/CareConnect-NhsNumberVerificatnStatus-1-Extension.structuredefinition.xml
-```
-
-Consumers SHALL use the NHS Number Verification Status where `nhsNumber` is used as the primary patient identifier.
-
-The extensions uses the following valueset:
-
-```http
-http://hl7.org.uk/CareConnect-NhsNumberVerificationStatus-1.valueset.xml
-```
-This valueset comprises of codes from the NHS data Dictionary: NHS Number Status Indicator Code which can be viewed at [NHS Number Status Indicator Code](http://www.datadictionary.nhs.uk/data_dictionary/data_field_notes/n/nhs/nhs_number_status_indicator_code_de.asp?shownav=0 "NHS Number Status Indicator Code")
-
-NHS Status Indicator Codes
-
-|Code|Display|
-|----|-------|
-|01|Number present and verified|
-|02|Number present but not traced	|
-|03|Trace required|
-|04|Trace attempted - No match or multiple match found|
-|05|Trace needs to be resolved - (NHS number or patient detail conflict)|
-|06|Trace in progress|
-|07|Number not present and trace not required|
-|08|Trace postponed (baby under six weeks old)|
-
-Example of correct usage
+**Example of correct usage**
 
 |Usage| Element| examples| Comments|
-|![Tick](images/tick.png)|`nhsNumber`| 4025561234|Patients 10 digit NHS number stored as a string|
+|![Tick](images/tick.png)|`id`| 347|Logical id stored as a string value.|
 
 Examples of incorrect usage
 
 |Usage| Element| examples| Comments|
-|![Cross](images/cross.png)|`nhsNumber`| 402 556 1234|NHS number must not store spaces in the number|
-|![Cross](images/cross.png)|| 402-556-1234|NHS number must not use hyphenation in the number|
+|![Cross](images/cross.png)|`id`| 402 556 1234|NHS number must not be used as the logical id| **To CONFIRM**
 
-{% include important.html content="The `other` identifier is not a national code and is subject to local guidelines" %}
+RESTful API example
 
-The language in which the patient wishes to communicate. Only one language can be used captured here.
-
-On the wire XML example
-
-```xml
-<identifier>
-	<extension url="http://hl7.org.uk/fhir/CareConnect-NhsNumberVerificationStatus-1-Extension">
-		<valueCodeableConcept>
-			<coding>
-			 <system value="http://hl7.org.uk/fhir/ValueSet/CareConnect-NhsNumberVerificationStatus"/>
-			 <code value="01"/>
-			 <display value="Number present and verified"/>
-			</coding>
-		</valueCodeableConcept>
-	</extension>
-	<system value="https://fhir.nhs.uk/Id/nhs-number"/>
-		<value value="1352465790"/>
-</identifier>
-```
-
-On the wire example in JSON
-
-```json
-{
-  "identifier": {
-    "extension": {
-      "-url": "http://hl7.org.uk/fhir/CareConnect-NhsNumberVerificationStatus-1-Extension",
-      "valueCodeableConcept": {
-        "coding": {
-          "system": { "-value": "http://hl7.org.uk/fhir/ValueSet/CareConnect-NhsNumberVerificationStatus" },
-          "code": { "-value": "01" },
-          "display": { "-value": "Number present and verified" }
-        }
-      }
-    },
-    "system": { "-value": "https://fhir.nhs.uk/Id/nhs-number" },
-    "value": { "-value": "1352465790" }
-  }
-}
-```
+{% include custom/search.token1.html para="2.1." base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content="id" text1="347" %}
 
 *Error Handling*
 
 The provider system SHALL return an error if:
 
-- the `nhsNumber` is invalid (i.e. fails NHS Number format and check digit tests).
-- the `nhsNumber` is not associated with a NHS Number Status Indicator Code
-
-### Other Identifiers ###
-
-Provider systems MAY use alternative patient identifiers in addition to the `nhsNumber` sliced element. 
-
-|Type|name|Data Type|Description|
-| ------------- | ------------- | ------------- | ------------- |
-| Slice| identifier| Identifier | A unique national and/or local identifier for a patient |
-|Complex| identifier#2 [other]|Identifier| Alternative identifers for a NHS patient.|
+- the `id` is invalid
 
 
-- `other` **MUST NOT** be used in place of an NHS Number
-- Providers **MAY** uses multiple local identifiers where it is appropreiate
-- Providers **MAY** use `other` in addition to nhsNumber`
-- The namespace for the `other` MUST be populated when identifier is used
-- The `other` MUST be a populated string value
-
-### Examples ###
-
-On the wire example XML
-
-```xml
-<identifier>
-	<system value="http://fhir.nhs.uk/Id/local-identifier"/>
-		<value value="MRT12345"/>
-</identifier>
-```
-On the wire example JSON
-
-```json
-{
-  "identifier": {
-    "system": { "-value": "http://fhir.nhs.uk/Id/local-identifier" },
-    "value": { "-value": "MRT12345" }
-  }
-}
-```
-
-*Error Handling*
-
-The provider system SHALL return an error if:
-
-TODO
 
 
 
