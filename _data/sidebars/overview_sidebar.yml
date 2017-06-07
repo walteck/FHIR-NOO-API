@@ -59,9 +59,6 @@ entries:
         - title: Consent Overview
           url: /restfulapis_foundation_consent.html  
           output: web
-        - title: Logical ID
-          url: /consent_id.html  
-          output: web
         - title: status
           url: /consent_status.html  
           output: web 
