@@ -6,10 +6,7 @@ sidebar: profiles_sidebar
 permalink: consent_organization.html
 summary: "low level details for the care connect patient 'organziation' element"
 ---
-
-## Identifier Implementation Guide ##
-
-### Use case ###
+**TODO**
 
 This specification describes a single use case. 
 

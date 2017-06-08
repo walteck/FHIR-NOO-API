@@ -1,0 +1,25 @@
+<h3 id="patient">{{include.content2}}</h3>
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET {{include.base}}{{include.resource}}/[ID]</div>
+
+<p>See <a href="https://www.hl7.org/fhir/searchparameter-registry.html">reference</a> for details on this parameter.</p>
+
+<div class="language-http highlighter-rouge">
+<pre class="highlight"><code><span class="err">GET {{include.base}}{{include.resource}}/783ffeef-538e-4a17-bed2-983a382ccdd7
+</span></code>
+Return {{include.resource}} resource that has a logical id of {{include.text1}}.</pre>
+</div>
+
+<p>Return the patients consent records that exist with the supplied logical ID and have a category of "NOOM" to indicate these are National Opt-Out records that exclude Type 2 objections.</p> 
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET {{include.base}}{{include.resource}}?id=[ID]&category=[Category Type]</div>
+
+<div class="language-http highlighter-rouge">
+<pre class="highlight"><code><span class="err">GET {{include.base}}{{include.resource}}?id=783ffeef-538e-4a17-bed2-983a382ccdd7&category=NOOM
+</span></code>
+Return {{include.resource}} resource that has a patient value of {{include.text1}} and a category of {{include.text2}}.</pre>
+</div>
+
+

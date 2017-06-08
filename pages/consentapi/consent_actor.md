@@ -6,17 +6,12 @@ sidebar: overview_sidebar
 permalink: consent_actor.html
 summary: "low level details for the National Opt-Out 'actor' element"
 ---
-{% include important.html content="The actor element described is used to TO DO........." %}
-
-## id Implementation Guide ##
-
-### Use case ###
 
 This specification describes a single use case.
 
 ### Element Usage ###
 
-actor uses the Consent.actor element TODO...........
+actor uses the Consent.actor element to capture the patient or a healthcare professional who controls the consent. The value set will depend on how the consent was set e.g via NHS Choice or via GP Practice. 
 
 ### status ###
 
@@ -29,24 +24,49 @@ actor uses the Consent.actor element TODO...........
 Example of correct usage
 
 |Usage| Element| examples| Comments|
-|![Tick](images/tick.png)|`actor`| TODO| Enter text here|
+|![Tick](images/tick.png)|`role`| INF |Valid code taken from http://hl7.org/fhir/ValueSet/security-role-type|
+|![Tick](images/tick.png)|`reference`| https://nww.spine.nhs.uk/4505577104 |
+
 
 Examples of incorrect usage
 
 |Usage| Element| examples| Comments|
-|![Cross](images/cross.png)|`actor`| TODO|Enter text here|
+|![Cross](images/cross.png)|`role`| GP| invalid code, not supported by NOOM.|
+|![Cross](images/cross.png)|`reference`| G1231231 | Valid national code, but not url to locate it.
 
 
-On the wire XML example
+XML example
 
 ```xml
-TODO
+<actor>
+  <role>
+    <coding>
+      <system value="http://hl7.org/fhir/v3/ParticipationType"/>
+      <code value="INF"/> 
+    </coding>
+  </role>
+  <reference>
+    <reference value="https://nww.spine.nhs.uk/4505577104"/>
+  </reference>
+</actor>
 ```
 
-On the wire example in JSON
+JSON example
 
 ```json
-TODO
+{
+  "actor": {
+    "role": {
+      "coding": {
+        "system": { "-value": "http://hl7.org/fhir/v3/ParticipationType" },
+        "code": { "-value": "INF" }
+      }
+    },
+    "reference": {
+      "reference": { "-value": "https://nww.spine.nhs.uk/4505577104" }
+    }
+  }
+}
 ```
 
 *Error Handling*

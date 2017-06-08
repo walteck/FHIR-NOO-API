@@ -1,57 +1,58 @@
 ---
 title: dateTime Element
-keywords: date, time, consent
-tags: [profile,element,patient]
-sidebar: overview_sidebar
-permalink: consent_datetime.html
-summary: "low level details for the National Opt-Out 'period' element"
+keywords: date, time
+tags: [date,time]
+sidebar: profiles_sidebar
+permalink: datetime.html
+summary: "low level details for the care connect patient 'dateTime' element"
 ---
-{% include important.html content="The dateTime element described is used to TO DO........." %}
 
-## id Implementation Guide ##
+### dateTime ###
 
-### Use case ###
+|Data Type|Description|
+| ------------- | -------------|
+|dateTime |The date and time of day when the instance was last updated|
 
-This specification describes a single use case.
 
-### Element Usage ###
-
-dateTime uses the Consent.dateTime element TODO...........
-
-### status ###
-
-|name|Data Type|Description|
-| ------------- | ------------- | ------------- | ------------- |
-|dateTime| dateTime | Date stamp added to the consent record. |
-
-Example of correct usage
+**Example of Correct Usage**
 
 |Usage| Element| examples| Comments|
-|![Tick](images/tick.png)|`dateTime`| TODO| Enter text here|
+|![Tick](images/tick.png)|`dateTime`| 1957-01-01T08:39:16+00:00|Correct format for a time stamp, comprising of date, time (including seconds) and a timezone|
+|![Tick](images/tick.png)|`dateTime`| 1988-11-11T11:45+00:00|Correct format for a time stamp, comprising of date, time with seconds zero filled, and a timezone|
 
-Examples of incorrect usage
+**Example of Incorrect Usage**
 
 |Usage| Element| examples| Comments|
-|![Cross](images/cross.png)|`dateTime`| TODO|Enter text here|
+|![Cross](images/cross.png)||1973-04-01|The time is not present.|
+|![Cross](images/cross.png)||1987-01-23T24:00:00+00:00|The time 24:00 is not a valid time|
+|![Cross](images/cross.png)||1987/01/23T21:33:00+00:00|The date separator uses / which is not valid|
+
 
 On the wire XML example
 
 ```xml
-TODO
+<dateTime value="2017-02-01T11:15:33+00:00"/>
 ```
 
 On the wire example in JSON
 
 ```json
-TODO
+{
+    "dateTime": { "-value": "2016-01-02T08:39:16+00:00" }
+  }
+}
 ```
 
 *Error Handling*
 
 The provider system SHALL return an error if:
 
-- the `dateTime` is invalid (i.e. fails NHS Number format and check digit tests).
-- the `dateTime` is not associated with a NHS Number Status Indicator Code
+- `dateTime` is missing a time
+- `dateTime` is missing a timezone
+- `dateTime` date part is missing.
+
+
+
 
 
 

@@ -6,45 +6,42 @@ sidebar: overview_sidebar
 permalink: consent_consenting_party.html
 summary: "low level details for the National Opt-Out 'consentingParty' element"
 ---
-{% include important.html content="The consentingParty element described is used to TO DO........." %}
-
-## id Implementation Guide ##
-
-### Use case ###
-
-This specification describes a single use case.
-
 ### Element Usage ###
 
-Category uses the Consent.period element TODO...........
+consenting party uses the Consent.consentingParty element to capture the consenter. This would typically be the patient themselves.  
 
-### status ###
+### consenting party ###
 
 |name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
-|consentingParty| Reference | Captures the details of the orgnaization or person who has granted consent to share the data. |
+|consentingParty| Reference | Captures the details of the organization or person who has granted consent to share the data. |
 
 Example of correct usage
 
 |Usage| Element| examples| Comments|
-|![Tick](images/tick.png)|`consentingParty`| TODO| Enter text here|
+|![Tick](images/tick.png)|`consentingParty`|https://nww.spine.nhs.uk/4505577104 |
 
 Examples of incorrect usage
 
 |Usage| Element| examples| Comments|
-|![Cross](images/cross.png)|`consentingParty`| TODO|Enter text here|
+|![Cross](images/cross.png)|`consentingParty`| https://nww.spine.nhs.uk/450-557-7104|
 
-
-On the wire XML example
+XML example
 
 ```xml
-TODO
+    <consentingParty>
+    	<reference value="https://nww.spine.nhs.uk/4505577104"/>
+    </consentingParty>
 ```
 
-On the wire example in JSON
+JSON example
 
 ```json
-TODO
+{
+  "consentingParty": {
+    "reference": { "-value": "https://nww.spine.nhs.uk/4505577104" }
+  }
+}
 ```
 
 *Error Handling*

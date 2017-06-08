@@ -6,25 +6,18 @@ sidebar: overview_sidebar
 permalink: consent_source.html
 summary: "low level details for the National Opt-Out 'actor' element"
 ---
-{% include important.html content="The source element described is used to TO DO........." %}
-
-## id Implementation Guide ##
-
-### Use case ###
-
-This specification describes a single use case.
 
 ### Element Usage ###
 
-actor uses the Consent.actor element TODO...........
+source uses the Consent.source element to record how which mechanism was used to capture the consent information e.g Online, GP practice, Patient App.
 
-### status ###
+### source ###
 
 |name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
 |source|  | Backbone (parent) element to capture details about source system/method.|
 |attachment| Attachment | |
-|reference| Reference | |
+|reference| Reference | |  **TODO** could be a questionnaireResponse required or doc ref
 
 Example of correct usage
 

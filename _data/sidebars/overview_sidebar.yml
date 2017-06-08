@@ -62,6 +62,9 @@ entries:
         - title: status
           url: /consent_status.html  
           output: web 
+        - title: status
+          url: /consent_status.html  
+          output: web 
         - title: category
           url: /consent_category.html  
           output: web 

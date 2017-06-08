@@ -6,55 +6,58 @@ sidebar: overview_sidebar
 permalink: consent_category.html
 summary: "low level details for the National Opt-Out 'category' element"
 ---
-{% include important.html content="The category element described is used to TO DO........." %}
-
-## id Implementation Guide ##
-
-### Use case ###
-
-This specification describes a single use case.
 
 ### Element Usage ###
 
-Category uses the Consent.category element TODO...........
+Category uses the Consent.category element to distinguish the national opt-out consent instances from any other consent instance.
 
-### status ###
+### category ###
 
-|Type|name|Data Type|Description|
-| ------------- | ------------- | ------------- | ------------- |
-| Slice| identifier| Identifier | A unique national and/or local identifier for a patient |
-|Complex| identifier#1 [nhsNumber]|Identifier| The patient NHS Number.|
-|Extension|nhsNumberVerificationStatus|CodeableConcept| An extension with a required valueset that determines the status of the NHS number allocated to the patient.|
+|Element Type|Data Type|Description|
+| ------------- | ------------- | ------------- |
+|CodeableConcept | N/A| A unique national and/or local identifier for a patient |
 
 Example of correct usage
 
 |Usage| Element| examples| Comments|
-|![Tick](images/tick.png)|`category`| TODO| Enter text here|
+|![Tick](images/tick.png)|`category`| NOOM| A valid category code to identify consent instance as a NOOM type.
 
 Examples of incorrect usage
 
 |Usage| Element| examples| Comments|
-|![Cross](images/cross.png)|`category`| TODO|Enter text here|
+|![Cross](images/cross.png)|`category`| ICOL|Code taken from http://hl7.org/fhir/v3/ActCode. Not use by NOOM.|
 
 
-On the wire XML example
+XML Example
 
 ```xml
-TODO
+<category>
+	<coding>
+		<system value="https://fhir.nhs.uk/ValueSet/noom-category-type-1"/>
+		<code value="NOOM"/>
+	</coding>
+</category>
 ```
 
-On the wire example in JSON
+JSON Example
 
 ```json
-TODO
+{
+  "category": {
+    "coding": {
+      "system": { "-value": "https://fhir.nhs.uk/ValueSet/noom-category-type-1" },
+      "code": { "-value": "NOOM" }
+    }
+  }
+}
 ```
 
 *Error Handling*
 
 The provider system SHALL return an error if:
 
-- the `category` is invalid (i.e. fails NHS Number format and check digit tests).
-- the `category` is not associated with a NHS Number Status Indicator Code
+- the `category` code is not "NOOM"
+- the category valueset is not https://fhir.nhs.uk/ValueSet/noom-category-type-1
 
 
 
