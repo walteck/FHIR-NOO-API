@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-06-06T17:26:59.992+01:00" />
+    <lastUpdated value="2017-06-08T17:18:28.906+01:00" />
     <tag>
       <code value="1" />
     </tag>
@@ -16,6 +16,14 @@
   <status value="draft" />
   <date value="2017-06-06T16:38:15.6604672+01:00" />
   <publisher value="NHS Digital" />
+  <contact>
+    <name value="Interoperability Team" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+    </telecom>
+  </contact>
   <description value="An NHS Digital profile for recording the National Opt-Out Consent." />
   <purpose value="This is to capture whether an NHS patient has opted-out of sharing their data for the purposes of either:&#xD;&#xA;&#xD;&#xA;1. Research.&#xD;&#xA;2. Support planning and commissioning." />
   <copyright value="Copyright © 2017 Health and Social Care Information Centre.&#xD;&#xA;NHS Digital is the trading name of the Health and Social Care Information Centre.&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html" />
@@ -30,4 +38,143 @@
   <type value="Consent" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Consent" />
   <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Consent.identifier" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Consent.status" />
+      <definition value="The current status of consent for opting-out is indicated by this." />
+      <comment value="This element is labeled as a modifier because the status contains the codes rejected and entered-in-error that mark the Consent as not currently valid.   The codes in the valueset should be applied as follows, where &quot;Active&quot;indicates &quot;Opted in&quot;, and &quot;Inactive&quot; indicates &quot;Opted Out&quot;." />
+      <mustSupport value="true" />
+    </element>
+    <element>
+      <path value="Consent.category" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Consent.category.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="example" />
+        <description value="A code to categorise the type of consent for opting-out." />
+        <valueSetUri value="http://hl7.org/fhir/ValueSet/consent-category" />
+      </binding>
+    </element>
+    <element>
+      <path value="Consent.category.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/ValueSet/consent-category" />
+    </element>
+    <element>
+      <path value="Consent.category.coding.version" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Consent.category.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="example" />
+        <description value="A code to categorise the type of consent for opting-out." />
+        <valueSetUri value="http://hl7.org/fhir/ValueSet/consent-category" />
+      </binding>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Consent.category.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element>
+      <path value="Consent.category.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Consent.category.text" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Consent.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1" />
+        <aggregation value="contained" />
+        <aggregation value="referenced" />
+      </type>
+    </element>
+    <element>
+      <path value="Consent.patient.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element>
+      <path value="Consent.period" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element>
+      <path value="Consent.period.start" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element>
+      <path value="Consent.dateTime" />
+      <definition value="When this Consent was issued / created / indexed." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element>
+      <path value="Consent.consentingParty" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1" />
+        <aggregation value="contained" />
+        <aggregation value="referenced" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Practitioner-1" />
+        <aggregation value="contained" />
+        <aggregation value="referenced" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element>
+      <path value="Consent.actor" />
+      <comment value="The actor will either be the patient or the health care professional.  Note, the actor will never be the legal guardian, not will the actor be the Legal power of attorney.  The opt-out service is limited to patients who are over the age of 16 years." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element>
+      <path value="Consent.actor.role" />
+      <mustSupport value="true" />
+    </element>
+    <element>
+      <path value="Consent.actor.reference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1" />
+        <aggregation value="contained" />
+        <aggregation value="referenced" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Practitioner-1" />
+        <aggregation value="contained" />
+        <aggregation value="referenced" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
 </StructureDefinition>
