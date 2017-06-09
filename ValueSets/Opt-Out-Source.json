@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "url": "https://fhir.nhs.uk/ValueSet/opt-out-source-1",
+  "name": "Opt-Out-Source",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "https://fhir.nhs.uk/ValueSet/opt-out-source-1",
+        "concept": [
+          {
+            "display": "Online Process",
+            "code": "OP"
+          },
+          {
+            "code": "GP",
+            "display": "GP System"
+          },
+          {
+            "code": "PFSP",
+            "display": "Patient Facing Service App"
+          },
+          {
+            "code": "FN",
+            "display": "Form on NHS.UK"
+          },
+          {
+            "code": "CC",
+            "display": "Call Centre"
+          },
+          {
+            "code": "PP",
+            "display": "Paper Process"
+          }
+        ],
+        "version": "1.0"
+      }
+    ]
+  },
+  "description": "The medium through which the opt-out was captured.",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Opt-Out-Source</h2><tt>https://fhir.nhs.uk/ValueSet/opt-out-source-1</tt><p>The medium through which the opt-out was captured.</p></div>"
+  }
+}
