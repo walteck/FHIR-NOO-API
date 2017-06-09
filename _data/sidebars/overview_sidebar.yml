@@ -52,6 +52,9 @@ entries:
     - title: Overview | Profiles
       url: /restfulapis.html
       output: web
+    - title: Profile | Elements
+      url: /development_elements.html
+      output: web
       subfolders:         
       - title: FHIR&reg; Profile | Consent
         output: web
@@ -91,21 +94,6 @@ entries:
           output: web
         - title: source
           url: /consent_source.html  
-          output: web
-        - title: policy
-          url: /consent_policy.html  
-          output: web
-        - title: authority
-          url: /consent_authority.html  
-          output: web
-        - title: uri
-          url: /consent_uri.html  
-          output: web
-        - title: policyRule
-          url: /consent_policyrule.html  
-          output: web
-        - title: securityLabel
-          url: /consent_securitylabel.html  
           output: web
         - title: purpose
           url: /consent_purpose.html  
