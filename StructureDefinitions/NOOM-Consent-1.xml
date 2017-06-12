@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-06-09T17:29:25.966+01:00" />
+    <lastUpdated value="2017-06-12T10:32:00.59+01:00" />
     <tag>
       <code value="1" />
     </tag>
@@ -272,40 +272,6 @@
       <min value="1" />
     </element>
     <element>
-      <path value="Consent.sourceReference" />
-      <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/cofe-documentreference-2" />
-        <aggregation value="contained" />
-        <aggregation value="referenced" />
-      </type>
-    </element>
-    <element>
-      <path value="Consent.sourceReference.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element>
-      <path value="Consent.sourceReference.extension" />
-      <sliceName value="sourceOfOptOut" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-      </type>
-      <binding>
-        <strength value="required" />
-        <description value="The medium through which the opt-out was captured." />
-        <valueSetUri value="https://fhir.nhs.uk/ValueSet/opt-out-source-1" />
-      </binding>
-    </element>
-    <element>
       <path value="Consent.policyRule" />
       <max value="0" />
     </element>
@@ -317,12 +283,46 @@
       <path value="Consent.purpose" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="PurposeOfUse" />
         </extension>
         <strength value="required" />
       </binding>
+    </element>
+    <element>
+      <path value="Consent.purpose.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/v3/ActReason" />
+      <mustSupport value="true" />
+    </element>
+    <element>
+      <path value="Consent.purpose.version" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Consent.purpose.code" />
+      <comment value="Codes that could be used include: HRESCH (healthcare research) and HOPERAT (healthcare operations).  Note that FHIR strings may not exceed 1MB in size. " />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="A code to indicate the type of purpose for the consent." />
+        <valueSetUri value="http://hl7.org/fhir/ValueSet/v3-PurposeOfUse" />
+      </binding>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Consent.purpose.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element>
+      <path value="Consent.purpose.userSelected" />
+      <max value="0" />
     </element>
     <element>
       <path value="Consent.dataPeriod" />
