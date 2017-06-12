@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-06-12T18:04:00.249+01:00" />
+  </meta>
+  <url value="https://fhir.nhs.uk/StructureDefinition/extension-SourceOfOptOut-1" />
+  <version value="1.0.0" />
+  <name value="Extension-SourceOfOptOut-1" />
+  <status value="draft" />
+  <date value="2017-06-12T14:58:24.9521267+01:00" />
+  <contact>
+    <name value="Interoperability Team" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperability@nhs.net" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This extension is used to specify the source of the opt-out." />
+  <fhirVersion value="3.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Observation.valueOptOutSource" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Extension" />
+      <short value="The source of the opt-out." />
+    </element>
+    <element>
+      <path value="Extension.url" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/extension-SourceOfOptOut-1" />
+    </element>
+    <element>
+      <path value="Extension.valueReference" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NOOM-Consent-1.xml" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

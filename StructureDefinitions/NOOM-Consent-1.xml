@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-06-12T10:32:00.59+01:00" />
+    <lastUpdated value="2017-06-12T18:26:29.313+01:00" />
     <tag>
       <code value="1" />
     </tag>
@@ -270,6 +270,33 @@
     <element>
       <path value="Consent.organization.reference" />
       <min value="1" />
+    </element>
+    <element>
+      <path value="Consent.source[x].extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element>
+      <path value="Consent.source[x].extension" />
+      <sliceName value="OptOutSource" />
+      <short value="The source of the opt-out." />
+      <definition value="Optional Extension Element - found in all resources." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/extension-SourceOfOptOut-1" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="Coded Values for the source of the Opt Out" />
+        <valueSetUri value="https://fhir.nhs.uk/ValueSet/opt-out-source-1" />
+      </binding>
     </element>
     <element>
       <path value="Consent.policyRule" />
