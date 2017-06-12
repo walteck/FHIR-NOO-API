@@ -1,30 +1,23 @@
 ---
-title: Get the FHIR Conformance Profile
+title: Capability Statement
 keywords: foundations, fhir
 tags: [foundations,use_case,fhir]
-sidebar: foundations_sidebar
+sidebar: overview_sidebar
 permalink: foundations_use_case_get_the_fhir_conformance_profile.html
-summary: "Use case for getting the FHIR server's conformance profile."
+summary: "Use case for getting the FHIR server's capability statement profile."
 ---
 
 ## API Usage ##
 
 ### Request Operation ###
 
-#### FHIR Conformance Request ####
+#### FHIR Capability Statement Request ####
 
-The /metadata path on the root of the FHIR server will return the Conformance statement for the FHIR server:
-
-```http
-GET https://[fhir_base]/metadata
-```
-
-Alternatively, a HTTP OPTIONS request against the root of the FHIR server will also return the conformance profile:
+The /metadata path on the root of the FHIR server will return the capability statement for the FHIR server:
 
 ```http
-OPTIONS https://[fhir_base]/
+GET https://fhir.nhs.uk/metadata
 ```
-
 - For details of this interaction - see the [HL7 FHIR specification](https://www.hl7.org/fhir/http.html#conformance)
 - Note: The mime-type can be specified to request either XML or JSON using another URL parameter `?_format=[mime-type]`, or a `Content-Type` HTTP header as per the [FHIR specification](https://www.hl7.org/fhir/http.html#mime-type).
 

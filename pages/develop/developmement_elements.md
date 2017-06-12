@@ -7,7 +7,7 @@ permalink: development_elements.html
 summary: "Implentation guide on the characteristics and usage of the profiles elements"
 ---
 
-### Profile Elements ###
+## Consent Profile Elements ##
 
 |Name|Data Type|Card|Description|Valid Values|
 |----|---------|----|-----------|------------|
@@ -122,12 +122,13 @@ The example below demonstrates the structure of a constructed XML body that can 
 </Consent>
 ```
 
-{% include custom/get.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content2="GET" text1="783ffeef-538e-4a17-bed2-983a382ccdd7" text2="NOOM" %}
+{% include custom/get.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content2="GET" text1="https://nww.spine.nhs.uk/4505577104" text2="NOOM" text3="HRESCH"%}
 
-{% include custom/put.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content2="PUT" text1="783ffeef-538e-4a17-bed2-983a382ccdd7" %}
+{% include custom/put.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content2="PUT" text2="https://nww.spine.nhs.uk/4505577104" %}
 
+## Searching National Opt-Out History ##
 
-
+{% include custom/history.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content2="GET" id="785f7cc6-f63b-41fc-9bd4-2d09df5606f9" text1="https://nww.spine.nhs.uk/4505577104" text2="HRESCH" %}
 
 
 

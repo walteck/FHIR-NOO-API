@@ -52,63 +52,29 @@ entries:
     - title: Overview | Profiles
       url: /restfulapis.html
       output: web
-    - title: Profile | Elements
-      url: /development_elements.html
-      output: web
+    - title: RESTful Interactions
+      url: /development_interactions.html
+      output: web     
       subfolders:         
       - title: FHIR&reg; Profile | Consent
         output: web
         subfolderitems:
-        - title: Consent Overview
-          url: /restfulapis_foundation_consent.html  
+        - title: Elements & RESTful API
+          url: /development_elements.html
           output: web
-        - title: id
-          url: /consent_id.html  
-          output: web 
-        - title: status
-          url: /consent_status.html  
-          output: web 
-        - title: category
-          url: /consent_category.html  
-          output: web 
-        - title: patient
-          url: /consent_patient.html  
+        - title: Structure Definitions
+          url: /development_rendered_consent.html
           output: web
-        - title: period
-          url: /consent_period.html  
-          output: web
-        - title: dateTime
-          url: /consent_datetime.html  
-          output: web
-        - title: consentingParty
-          url: /consent_consenting_party.html  
-          output: web
-        - title: actor
-          url: /consent_actor.html  
-          output: web
-        - title: action
-          url: /consent_action.html  
-          output: web
-        - title: organization
-          url: /consent_organization.html  
-          output: web
-        - title: source
-          url: /consent_source.html  
-          output: web
-        - title: purpose
-          url: /consent_purpose.html  
-          output: web
+        - title: Profile Examples
+          url: /development_consent_examples.html
+          output: web       
     - title: API Foundations
       url: /foundations.html
-      output: web
-    - title: RESTful API
-      url: /restfulapis_api.html
       output: web
     - title: Reference
       url: /development_deliverables.html
       output: web
-
-    - title: Conformance Profile | FHIR&reg; 
+    - title: FHIR&reg; capabilityStatement
       url: /foundations_use_case_get_the_fhir_conformance_profile.html
       output: web      
       subfolders:
