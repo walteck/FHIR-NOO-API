@@ -32,10 +32,12 @@ The client system will construct a XML body containing NOOM preferences and subm
 - ***Receiver:*** Spine 2
 - ***RESTful API Interaction:*** POST [base]/consent
 
+---
+
 **Responses**
 
 Assuming successful URL submission, there are several possible responses to the NOOM request:
-- 
+
 - HTTP 201-Record Created: The entry has been successfully created and the NOOM returns an HTTP Location header containing the 'server' assigned logical Id of the created resource.
 - HTTP 400-Bad Request: Resource could not be parsed or failed basic FHIR validation rules
 - HTTP 404-Not Found: Resource type not supported, or not a FHIR end-point
@@ -48,6 +50,8 @@ The client system will perform a RESTful search interaction for current patient 
 - ***Sender:***Any NOOM Client
 - ***Receiver:***Spine 2
 - ***RESTful API Interaction:***GET [base]/consent[parameters] 
+
+---
 
 **Responses**
 
