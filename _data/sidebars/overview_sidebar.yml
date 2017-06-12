@@ -45,7 +45,6 @@ entries:
       url: /engage_case_studies.html
       output: web
       subfolders:
-
   - title: Design & Build
     output: web
     folderitems:
