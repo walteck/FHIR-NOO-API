@@ -4,7 +4,6 @@ entries:
   version: 1.0.0-alpha.1
   levels: one
   folders:
-
   - title: Overview
     output: web
     folderitems:
