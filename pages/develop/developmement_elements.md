@@ -11,7 +11,7 @@ summary: "Implentation guide on the characteristics and usage of the profiles el
 
 |Name|Data Type|Card|Description|Valid Values|
 |----|---------|----|-----------|------------|
-|`id`|token|1..1|Logical id assigned by the FHIR server|Any UUID|
+|[`id`](consent_id.html)|token|1..1|Logical id assigned by the FHIR server|Any UUID|
 |`status`|string|1..1|The current status of the consent instance|active,inactive|
 |`category`|string|1..1|Category uses the Consent.category element to distinguish the national opt-out consent instances from any other consent instance|NOOM|
 |`patient`|Reference|1..1|Spine reference to the patients NHS number traced from PDS|

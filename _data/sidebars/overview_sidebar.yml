@@ -14,8 +14,11 @@ entries:
     - title: Development Roadmap
       url: /design_development_roadmap.html
       output: web
-    - title: Care Connect Versioning
+    - title: Semantic Versioning
       url: /design_product_versioning.html
+      output: web
+    - title: API History
+      url: /design_product_history.html
       output: web
     - title: Glossary
       url: /overview_glossary.html
@@ -28,22 +31,12 @@ entries:
       url: /engage.html
       output: web, pdf
       type: homepage
-    - title: User Stories | FHIR&reg; 
+    - title: Case Studies
       url: /engage_user_stories.html
       output: web
-      subfolders:
     - title: Using Profiles
       url: /engage_using_profiles.html
       output: web
-      subfolders:
-    - title: Proof of Concepts
-      url: /engage_proof_of_concept.html
-      output: web
-      subfolders:
-    - title: Case Studies
-      url: /engage_case_studies.html
-      output: web
-      subfolders:
   - title: Design & Build
     output: web
     folderitems:
