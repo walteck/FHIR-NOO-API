@@ -72,7 +72,6 @@ entries:
       - title: API Guidance | FHIR&reg; 
         output: web
         subfolderitems:
-
         - title: Open Source
           url: /development_fhir_open_source_guidance.html
           output: web
@@ -81,15 +80,31 @@ entries:
           output: web
         - title: Cross Organnization Audit & Provenance using JWT
           url: /development_security_jwt.html
-          output: web
-          
+          output: web          
   - title: Explore
     output: web
     folderitems:
-    - title: Overview | Coming soon
-      url: /support_coming_soon.html
+    - title: Overview
+      url: /explore_overview.html
       output: web
-      
+      subfolders:
+      - title: FHIR Clients
+        url: /explore_fhir_clients.html
+        output: web        
+        subfolderitems:    
+        - title: Java Script | SMART on FHIR
+          url: /explore_fhir_js.html
+          output: web
+        - title: C# | FHIR .NET
+          url: /explore_fhir_c.html
+          output: web
+        - title: Java | HAPI NET
+          url: /explore_fhir_java.html
+          output: web
+        - title: Python | Smart on FHIR
+          url: /explore_fhir_python.html
+          output: web
+        
   - title: Test
     output: web
     folderitems:
@@ -162,4 +177,5 @@ entries:
       output: web	  
     - title: Development
       url: /tag_development.html
-      output: web      
+      output: web
+   
