@@ -37,6 +37,7 @@ consent.addPurpose()
 	.setCode("HRESCH")
 	.setDisplay("healthcare research");
 ```
+
 ## Establish a connection to a FHIR Server ##
 
 ```java
