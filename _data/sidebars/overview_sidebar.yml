@@ -147,10 +147,10 @@ entries:
     output: web
     folderitems:
     - title: Frequently Asked Questions (FAQ)
-      url: /support_faq.html
+      url: /communications_faq.html
       output: web
     - title: Communication Channels
-      url: /support_communications.html
+      url: /communications.html
       output: web    
       
   - title: Tags
