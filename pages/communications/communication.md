@@ -5,7 +5,7 @@ tags: [comms,contac, help]
 sidebar: overview_sidebar
 toc: false
 permalink: communications.html
-summary: "help and Support with the National Opt-Out API"
+summary: "Help and Support with the National Opt-Out API"
 ---
 <div Style="width:30%;float:right;margin-left:3%">
   <a class="twitter-timeline" href="https://twitter.com/INTEROPenAPI" data-tweet-limit="3">Tweets by INTEROpen</a>
@@ -17,32 +17,32 @@ summary: "help and Support with the National Opt-Out API"
 </div>
 
 
-## NHS Digital 
+### NHS Digital 
 
-In the evnt that you require any assistance with the implementation of the API, the following communication channels are available: 
+In the event that you require any assistance or have any queries with the implementation of the National Opt-Out API, the following communication channels are available: 
 
-**E-Mail:**interoperabilityteam@nhs.net
-
-**Telephone:** TODO
-
-**Twitter:**
-
-
+**E-Mail:** <interoperabilityteam@nhs.net>
 
 ## FHIR Community Channels
 
-**Zulip**
+<img src="images/zulip.png" style="width:5%;max-width: 5%;"> **Zulip**
 
 Zulip provides access to an online community of FHIR enthusiasts, implementers and developers from across the globe, all working towards the common goal of a truly interoperable world.
 
 You can join this community by visiting [https://chat.fhir.org](https://chat.fhir.org)
 
 
-**INTEROPen**
+<img src="images/interopen.png" style="width:5%;max-width: 5%;"> **INTEROPen**
 
+INTEROPen is an OPEN collaboration of individuals, industry, standards organisations and health and care providers, who have agreed to work together to accelerate the development of open standards for interoperability in the health and social care sector.
 
+INTEROPen aims to provide a forum to collaborate on the design and application of technical interoperability standards. The areas covered by the group include data exchange, data validation, defining APIs and governance. It is an action group whereby members commit to design, validation and demonstration using real systems.
+Commercial interests are put to one side in the group’s activities.
 
-**HL7**
+To join INTEROPen please contact <membership@interopen.org>
+
+Reference:[http://www.interopen.org](http://www.interopen.org/about)
+
 
 
 

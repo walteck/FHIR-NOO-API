@@ -11,14 +11,17 @@ summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of Nation
 
 | Profile | ValueSets |
 | :--------- |:-------- |
-| [NOOM-Consent-1](https://fhir.nhs.uk/StructureDefinitions/noom-consent-1.xml) | 
+| [NOOM-Consent-1](https://simplifier.net/TestNationalOptOutPr/NOOM-Consent-1xml) | 
 
 # Identifiers #
 
 | identifier | URI | Comment |
 |--------------------------------------------|----------|----|
-| Logical ID | https://fhir.nhs.uk/Consent/Id | Consent record identifier |
-| Patient | https://spine.nhs.uk/nhs-number | Patient |
+| `Logical ID` | https://fhir.nhs.uk/Consent/Id | Consent record identifier |
+| `Patient` | https://proxy.pds.nhs.uk | Patient |
+| `consentingParty` | https://proxy.sds.nhs.uk | Patient |
+|`actor`|https://proxy.sds.nhs.uk or https://proxy.pds.nhs.uk | Patient or Practitioner|
+|`organization`|https://proxy.sds.nhs.uk |NHS Digital|
 
 
 ```

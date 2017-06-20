@@ -8,11 +8,12 @@ permalink: communications_faq.html
 summary: "Frequently Asked Questions (FAQ)."
 ---
 
-#### FAQ Question One. ####
+### *FAQ Question One*
 
 FAQ Answer one.
 
-#### FAQ Question Two. ####
+### *FAQ Question two*
+
 
 FAQ Answer two.
 

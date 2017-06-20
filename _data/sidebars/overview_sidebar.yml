@@ -31,11 +31,11 @@ entries:
       url: /engage.html
       output: web, pdf
       type: homepage
-    - title: Case Studies
+    - title: Use Cases
       url: /engage_user_stories.html
       output: web
-    - title: Using Profiles
-      url: /engage_using_profiles.html
+    - title: Case Studies
+      url: /engage_case_studies.html
       output: web
   - title: Design & Build
     output: web
