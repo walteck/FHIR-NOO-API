@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-06-20T16:35:52.783+01:00" />
+    <lastUpdated value="2017-06-21T09:39:03.228+01:00" />
     <tag>
       <code value="1" />
     </tag>
@@ -49,27 +49,16 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Consent.extension:OptOutSource">
+    <element id="Consent.extension:sourceOfOptOut">
       <path value="Consent.extension" />
-      <sliceName value="OptOutSource" />
+      <sliceName value="sourceOfOptOut" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/extension-SourceOfOptOut-1" />
-      </type>
-      <binding>
-        <strength value="required" />
-        <description value="Coded Values for the source of the Opt Out" />
-        <valueSetUri value="https://fhir.nhs.uk/ValueSet/opt-out-source-1" />
-      </binding>
-    </element>
-    <element id="Consent.extension:OptOutSource.value[x]">
-      <path value="Consent.extension.valueReference" />
-      <sliceName value="valueReference" />
-      <type>
-        <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NOOM-Consent-1.xml" />
-        <aggregation value="referenced" />
       </type>
     </element>
     <element id="Consent.identifier">
@@ -256,19 +245,8 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Consent.source[x]:sourceReference.reference">
-      <path value="Consent.sourceReference.reference" />
-      <max value="0" />
-    </element>
-    <element id="Consent.source[x]:sourceReference.identifier">
-      <path value="Consent.sourceReference.identifier" />
-      <max value="0" />
-    </element>
-    <element id="Consent.source[x]:sourceReference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Consent.sourceReference.display" />
+    <element id="Consent.source[x]">
+      <path value="Consent.source[x]" />
       <max value="0" />
     </element>
     <element id="Consent.policy">

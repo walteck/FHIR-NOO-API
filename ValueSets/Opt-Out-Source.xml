@@ -1,46 +1,23 @@
-<?xml version="1.0"?>
-<ajson:json xmlns:ajson="http://www.altova.com/json" ajson:type="object">
-	<resourceType ajson:type="string">ValueSet</resourceType>
-	<url ajson:type="string">https://fhir.nhs.uk/ValueSet/opt-out-source-1</url>
-	<name ajson:type="string">Opt-Out-Source</name>
-	<status ajson:type="string">draft</status>
-	<compose ajson:type="object">
-		<include ajson:type="array">
-			<item ajson:type="object">
-				<system ajson:type="string">https://fhir.nhs.uk/ValueSet/opt-out-source-1</system>
-				<concept ajson:type="array">
-					<item ajson:type="object">
-						<display ajson:type="string">Online Process</display>
-						<code ajson:type="string">OP</code>
-					</item>
-					<item ajson:type="object">
-						<code ajson:type="string">GP</code>
-						<display ajson:type="string">GP System</display>
-					</item>
-					<item ajson:type="object">
-						<code ajson:type="string">PFSP</code>
-						<display ajson:type="string">Patient Facing Service App</display>
-					</item>
-					<item ajson:type="object">
-						<code ajson:type="string">FN</code>
-						<display ajson:type="string">Form on NHS.UK</display>
-					</item>
-					<item ajson:type="object">
-						<code ajson:type="string">CC</code>
-						<display ajson:type="string">Call Centre</display>
-					</item>
-					<item ajson:type="object">
-						<code ajson:type="string">PP</code>
-						<display ajson:type="string">Paper Process</display>
-					</item>
-				</concept>
-				<version ajson:type="string">1.0</version>
-			</item>
-		</include>
-	</compose>
-	<description ajson:type="string">The medium through which the opt-out was captured.</description>
-	<text ajson:type="object">
-		<status ajson:type="string">generated</status>
-		<div ajson:type="string">&lt;div xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;h2&gt;Opt-Out-Source&lt;/h2&gt;&lt;tt&gt;https://fhir.nhs.uk/ValueSet/opt-out-source-1&lt;/tt&gt;&lt;p&gt;The medium through which the opt-out was captured.&lt;/p&gt;&lt;/div&gt;</div>
-	</text>
-</ajson:json>
+<?xml version="1.0" encoding="UTF-8"?>
+<n1:ValueSet xmlns:n1="http://hl7.org/fhir">
+	<n1:url value="https://fhir.nhs.uk/ValueSet/opt-out-source-1"/>
+	<n1:version value="1.0.0"/>
+	<n1:name value="Opt Out Source"/>
+	<n1:status value="draft"/>
+	<n1:date value="2017-06-10"/>
+	<n1:publisher value="NHS Digital"/>
+	<n1:contact>
+		<n1:name value="Interoperability Team"/>
+		<n1:telecom>
+			<n1:value value="interoperabilityteam@nhs.net"/>
+			<n1:use value="work"/>
+		</n1:telecom>
+	</n1:contact>
+	<n1:purpose value="TBC"/>
+	<n1:copyright value="Copyright © 2017 Health and Social Care Information Centre. NHS Digital is the trading name of the Health and Social Care Information Centre."/>
+	<n1:compose>
+		<n1:include>
+			<n1:system value="https://fhir.nhs.uk/opt-out-source-1"/>
+		</n1:include>
+	</n1:compose>
+</n1:ValueSet>

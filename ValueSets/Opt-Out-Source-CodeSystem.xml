@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<n1:CodeSystem xmlns:n1="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir codesystem.xsd">
-	<n1:url value="https://fhir.nhs.uk/opt-out-source-1"/>
+<n1:CodeSystem xmlns:n1="http://hl7.org/fhir">
+	<n1:url value="https://fhir.nhs.uk/opt-out-source-codesystem-1"/>
 	<n1:version value="1.0.0"/>
-	<n1:name value="Opt Out Source"/>
+	<n1:name value="Opt Out Source CodeSystem"/>
 	<n1:status value="draft"/>
 	<n1:publisher value="NHS Digital"/>
 	<n1:contact>
