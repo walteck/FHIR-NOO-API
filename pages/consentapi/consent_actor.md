@@ -7,8 +7,6 @@ permalink: consent_actor.html
 summary: "low level details for the National Opt-Out 'actor' element"
 ---
 
-This specification describes a single use case.
-
 ### Element Usage ###
 
 actor uses the Consent.actor element to capture the patient or a healthcare professional who controls the consent. The value set will depend on how the consent was set e.g via NHS Choice or via GP Practice. 
@@ -16,7 +14,7 @@ actor uses the Consent.actor element to capture the patient or a healthcare prof
 ### status ###
 
 |name|Data Type|Description|
-| ------------- | ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- |
 |actor| Reference | Backbone (parent) element to capture details about how consent is controlled.|
 |role| CodeableConcept | The role the actor plays|
 |reference| Reference | Resource that relates to the actor.|
@@ -25,8 +23,8 @@ Example of correct usage
 
 |Usage| Element| examples| Comments|
 |![Tick](images/tick.png)|`role`| INF |Valid code taken from http://hl7.org/fhir/ValueSet/security-role-type|
-|![Tick](images/tick.png)|`reference`| https://nww.spine.nhs.uk/4505577104 |
-
+|![Tick](images/tick.png)|`reference`| https://proxy.sds.nhs.uk/G1231231 |
+|![Tick](images/tick.png)|`reference`| https://proxy.pds.nhs.uk/4505577104 |
 
 Examples of incorrect usage
 
@@ -63,7 +61,7 @@ JSON example
       }
     },
     "reference": {
-      "reference": { "-value": "https://nww.spine.nhs.uk/4505577104" }
+      "reference": { "-value": "https://proxy.sds.nhs.uk/G1231231" }
     }
   }
 }
@@ -71,10 +69,7 @@ JSON example
 
 *Error Handling*
 
-The provider system SHALL return an error if:
-
-- the `actor` is invalid (i.e. fails NHS Number format and check digit tests).
-- the `actor` is not associated with a NHS Number Status Indicator Code
+HTTP response codes will determine the success or failure of the POST operation. No element specific codes will be generated upon failure to POST.
 
 
 

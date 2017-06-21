@@ -14,18 +14,18 @@ action uses the Consent.action element to indicate what actions are controlled b
 ### status ###
 
 |name|Data Type|Description|
-| ------------- | ------------- | ------------- | ------------- |
-|action|CondeablConcept  | TODO|
+| ------------- | ------------- | ------------- |
+|action|CodeablConcept|Actions controlled by the agreed consent|
 
 Example of correct usage
 
 |Usage| Element| examples| Comments|
-|![Tick](images/tick.png)|`action`| disclose|Only a value of 'disclose' is permitted in this element|
+|![Tick](images/tick.png)|`action`|disclose|Only a value of 'disclose' is permitted in this element|
 
 Examples of incorrect usage
 
 |Usage| Element| examples| Comments|
-|![Cross](images/cross.png)|`action`| collect|Invalid code. Element has a fixed value to 'disclose'|
+|![Cross](images/cross.png)|`action`| collect|Invalid code. Element has a fixed value of 'disclose'|
 
 
 On the wire XML example
@@ -54,11 +54,4 @@ On the wire example in JSON
 
 *Error Handling*
 
-The provider system SHALL return an error if:
-
-- the `action` does not have a value of 'disclose'
-
-
-
-
-
+HTTP response codes will determine the success or failure of the POST operation. No element specific codes will be generated upon failure to POST.

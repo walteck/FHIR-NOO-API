@@ -7,18 +7,6 @@ permalink: development_interactions.html
 summary: "National Opt-Out Spine Interactions"
 ---
 
-## NOOM API Overview ##
-
-This section provides National Opt-Out (NOOM) implementers with an overview of the NOOM API messaging interface also known as the ‘National Opt-Out Service’.
-
-The NOOM API supports the following functionality:
-
-- POST patient NOOM preferences
-- GET existing patient NOOM preferences
-- PUT patient updated NOOM preferences
-
-The NOOM API is based on the HL7 FHIR STU3 3.0.1 Messaging Implementation (April 2017).
-
 ## National Opt-Out Spine RESTful Interaction Diagram ##
 
 <img src="images/NOOMInteractions2.png">

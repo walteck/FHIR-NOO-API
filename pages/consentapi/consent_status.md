@@ -36,12 +36,12 @@ Examples of incorrect usage
 
 ### Examples ###
 
-XML
+XML Body
 
 ```xml
 <status value="active"/>
 ```
-JSON
+JSON Body
 
 ```json
 {
@@ -49,11 +49,30 @@ JSON
 }
 ```
 
+### Code Snippets
+
+```javascript
+TODO
+```
+
+```python
+TODO
+```
+
+```C#
+TODO
+```
+
+```java
+TODO
+```
+
+
 *Error Handling*
 
-The provider system SHALL return an error if:
+HTTP response codes will determine the success or failure of the POST operation. No element specific codes will be generated upon failure to POST.
 
-- `status` has a code of anything other than inactive or active
+
 
 
 

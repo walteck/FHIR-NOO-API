@@ -9,23 +9,28 @@ summary: "Implentation guide on the characteristics and usage of the profiles el
 
 ## Consent Profile Elements ##
 
-|Name|Data Type|Card|Description|Valid Values|
-|----|---------|----|-----------|------------|
+|Name|Data Type|Card|Description|
+|----|---------|----|-----------|
 |[`id`](consent_id.html)|token|1..1|Logical id assigned by the FHIR server|Any UUID|
-|`status`|string|1..1|The current status of the consent instance|active,inactive|
-|`category`|string|1..1|Category uses the Consent.category element to distinguish the national opt-out consent instances from any other consent instance|NOOM|
-|`patient`|Reference|1..1|Spine reference to the patients NHS number traced from PDS|
+|[`status`](consent_status.html)|string|1..1|The current status of the consent instance|active,inactive|
+|[`category`](consent_category.html)|string|1..1|Category uses the Consent.category element to distinguish the national opt-out consent instances from any other consent instance|NOOM|
+|[`patient`](consent_patient.html)|Reference|1..1|Spine reference to the patients NHS number traced from PDS|
 |`period`|dateTime|1..1|Period consent commences|
 |`dateTime`|dateTime|1..1|Date and time instance was last updated|Date+Time+TimeZone|
-|`consentingParty`|Reference|1..1|Reference to the patient NHS number traced from PDS|
-|`actor`|backbone|0..1|Captures the patient or healthcare professional who controls the consent|N/A|
+|[`consentingParty`](consentingparty.html)|Reference|1..1|Reference to the patient NHS number traced from PDS|
+|[`actor`](consent_actor.html)|backbone|0..1|Captures the patient or healthcare professional who controls the consent|N/A|
 |`actor.role`|CodeableConcept|1..1|Valueset for the role|INF|
 |`actor.reference`|Reference|1..1|URL for the actor|
-|`action`|CodeableConcept|1..1|to indicate what actions are controlled by the national opt-out policy|disclose|
-|`organization`|Reference|1..1|ODS code for the organization.|MUST be a URL|
-|`source`|Reference|1..1|Capture mechanism used to set the patients preferences|
-|`purpose`|Coding|1..1|Contains Opt-Out for Research or Commissioning & Planning|HRESCH, HOPERAT|
+|[`action`](consent_action.html)|CodeableConcept|1..1|to indicate what actions are controlled by the national opt-out policy|disclose|
+|[`organization`](consent_organization.html)|Reference|1..1|ODS code for the organization.|MUST be a URL|
+|[`source`](consent_source.html)|Reference|1..1|Capture mechanism used to set the patients preferences|
+|[`purpose`](consent_purpose.html)|Coding|1..1|Contains Opt-Out for Research or Commissioning & Planning|HRESCH, HOPERAT|
 
+## Consent Extensions ##
+
+|Name|Data Type|Card|Description|
+|----|---------|----|-----------|
+|[`sourceofoptout`](consent_extension_sourceofoptout.html)|extension|1..1|Extension to capture the source that defined the national opt-out preferences e.g NHS Choice, GP System|
 
 ## FHIR&reg; RESTful API Examples ##
 

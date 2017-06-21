@@ -54,10 +54,7 @@ JSON Example
 
 *Error Handling*
 
-The provider system SHALL return an error if:
-
-- the `category` code is not "NOOM"
-- the category valueset is not https://fhir.nhs.uk/ValueSet/noom-category-type-1
+HTTP response codes will determine the success or failure of the POST operation. No element specific codes will be generated upon failure to POST.
 
 
 

@@ -4,7 +4,7 @@ keywords: source, consent
 tags: [profile,element,patient]
 sidebar: overview_sidebar
 permalink: consent_source.html
-summary: "low level details for the National Opt-Out 'actor' element"
+summary: "low level details for the National Opt-Out 'source' element"
 ---
 
 ### Element Usage ###
