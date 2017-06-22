@@ -1,18 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="a651c1a1-adc1-4a0b-9aa5-6a17a73a7fd6" />
   <meta>
-    <lastUpdated value="2017-06-21T16:51:16.824+01:00" />
+    <versionId value="2" />
+    <lastUpdated value="2017-06-22T08:47:30.871+01:00" />
   </meta>
-  <url value="https://fhir.nhs.uk/StructureDefinition/extension-SourceOfOptOut-1" />
-  <version value="1.0.0" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-SourceOfOptOut-1" />
   <name value="Extension-SourceOfOptOut-1" />
   <status value="draft" />
-  <date value="2017-06-21T09:31:29.6923022+01:00" />
+  <date value="2017-06-22T08:34:53.0550988+01:00" />
+  <description value="Extension to represent the source of the opt out." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="CodeableConcept" />
+  <context value="Consent" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -20,9 +21,9 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <min value="0" />
-      <max value="*" />
+      <definition value="Extension to represent the source of the opt out." />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Element" />
         <min value="0" />
@@ -146,7 +147,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/extension-SourceOfOptOut-1" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-SourceOfOptOut-1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -188,6 +189,11 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <binding>
+        <strength value="required" />
+        <description value="Source of Opt Out" />
+        <valueSetUri value="https://fhir.nhs.uk/ValueSet/opt-out-source-1" />
+      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -300,6 +306,11 @@
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="Source of Opt Out" />
+        <valueSetUri value="https://fhir.nhs.uk/ValueSet/opt-out-source-1" />
+      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -423,6 +434,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="https://fhir.nhs.uk/opt-out-source-1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -432,11 +444,6 @@
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="The source of the opt-out." />
-        <valueSetUri value="https://fhir.nhs.uk/ValueSet/opt-out-source-1" />
-      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -520,11 +527,6 @@
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="The source of the opt-out." />
-        <valueSetUri value="https://fhir.nhs.uk/ValueSet/opt-out-source-1" />
-      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -676,9 +678,15 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <definition value="Extension to represent the source of the opt out." />
+      <min value="1" />
+      <max value="1" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/extension-SourceOfOptOut-1" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-SourceOfOptOut-1" />
     </element>
     <element id="Extension.value[x]:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
@@ -687,20 +695,26 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="required" />
+        <description value="Source of Opt Out" />
+        <valueSetUri value="https://fhir.nhs.uk/ValueSet/opt-out-source-1" />
+      </binding>
     </element>
     <element>
       <path value="Extension.valueCodeableConcept.coding" />
       <min value="1" />
       <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="Source of Opt Out" />
+        <valueSetUri value="https://fhir.nhs.uk/ValueSet/opt-out-source-1" />
+      </binding>
     </element>
     <element>
       <path value="Extension.valueCodeableConcept.coding.system" />
       <min value="1" />
-      <binding>
-        <strength value="required" />
-        <description value="The source of the opt-out." />
-        <valueSetUri value="https://fhir.nhs.uk/ValueSet/opt-out-source-1" />
-      </binding>
+      <fixedUri value="https://fhir.nhs.uk/opt-out-source-1" />
     </element>
     <element>
       <path value="Extension.valueCodeableConcept.coding.version" />
@@ -709,11 +723,6 @@
     <element>
       <path value="Extension.valueCodeableConcept.coding.code" />
       <min value="1" />
-      <binding>
-        <strength value="required" />
-        <description value="The source of the opt-out." />
-        <valueSetUri value="https://fhir.nhs.uk/ValueSet/opt-out-source-1" />
-      </binding>
     </element>
     <element>
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
