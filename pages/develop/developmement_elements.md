@@ -28,9 +28,15 @@ summary: "Implentation guide on the characteristics and usage of the profiles el
 
 ## Consent Extensions ##
 
+National Opt-Out Source of Opt-Out extension
+
+`https://fhir.nhs.uk/StructureDefinition/extension-SourceOfOptOut-1`
+
+
 |Name|Data Type|Card|Description|
 |----|---------|----|-----------|
 |[`sourceofoptout`](consent_extension_sourceofoptout.html)|extension|1..1|Extension to capture the source that defined the national opt-out preferences e.g NHS Choice, GP System|
+
 
 ## FHIR&reg; RESTful API Examples ##
 
