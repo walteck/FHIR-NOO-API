@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-06-28T15:38:22.995+01:00" />
+    <lastUpdated value="2017-06-28T16:08:20.149+01:00" />
     <tag>
       <code value="1" />
     </tag>
@@ -2312,7 +2312,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="https://proxy.pds.nhs.uk/patient" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2440,10 +2440,6 @@
       <type>
         <code value="string" />
       </type>
-      <example>
-        <label value="Patient on PDS" />
-        <valueString value="https://proxy.pds.nhs.uk" />
-      </example>
       <condition value="ele-1" />
       <condition value="ref-1" />
       <constraint>
@@ -4499,7 +4495,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="https://proxy.sds.nhs.uk/organization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -10296,19 +10292,22 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Consent.patient.reference">
+    <element id="Consent.patient">
+      <path value="Consent.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://proxy.pds.nhs.uk/patient" />
+      </type>
+    </element>
+    <element>
       <path value="Consent.patient.reference" />
       <min value="1" />
-      <example>
-        <label value="Patient on PDS" />
-        <valueString value="https://proxy.pds.nhs.uk" />
-      </example>
     </element>
-    <element id="Consent.patient.identifier">
+    <element>
       <path value="Consent.patient.identifier" />
       <max value="0" />
     </element>
-    <element id="Consent.patient.display">
+    <element>
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -10466,6 +10465,10 @@
       <path value="Consent.organization" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://proxy.sds.nhs.uk/organization" />
+      </type>
     </element>
     <element id="Consent.organization.reference">
       <path value="Consent.organization.reference" />
