@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-06-28T11:05:10.644+01:00" />
+    <lastUpdated value="2017-06-28T15:38:22.995+01:00" />
     <tag>
       <code value="1" />
     </tag>
@@ -2148,11 +2148,6 @@
       </constraint>
       <mustSupport value="true" />
       <isSummary value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="A code to categorise the type of consent for opting-out" />
-        <valueSetUri value="https://fhir.nhs.uk/ValueSet/noom-category-1" />
-      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -5623,11 +5618,6 @@
       </constraint>
       <mustSupport value="true" />
       <isSummary value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="Codes that describe the purpose of this consent." />
-        <valueSetUri value="https://fhir.nhs.uk/valueset/noom-preferences-1" />
-      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -10297,11 +10287,6 @@
       <path value="Consent.category.coding.code" />
       <min value="1" />
       <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="A code to categorise the type of consent for opting-out" />
-        <valueSetUri value="https://fhir.nhs.uk/ValueSet/noom-category-1" />
-      </binding>
     </element>
     <element id="Consent.category.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -10582,11 +10567,6 @@
         <valueCode value="RESCH" />
       </example>
       <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="Codes that describe the purpose of this consent." />
-        <valueSetUri value="https://fhir.nhs.uk/valueset/noom-preferences-1" />
-      </binding>
     </element>
     <element id="Consent.purpose.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
