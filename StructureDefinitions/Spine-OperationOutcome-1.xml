@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-06-28T11:42:19.978+01:00" />
+    <lastUpdated value="2017-07-17T16:18:47.878+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="fhir" />
   </extension>
-  <url value="https://fhir.nhs.uk/3.0.1/StructureDefinition/spine-operationoutcome-1" />
+  <url value="https://fhir.nhs.uk/STU3/StructureDefinition/spine-operationoutcome-1" />
   <version value="1.0.0" />
   <name value="Spine-OperationOutcome-1" />
   <title value="Spine-OperationOutcome-1" />

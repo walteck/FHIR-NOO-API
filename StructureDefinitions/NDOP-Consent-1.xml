@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-17T14:57:08.405+01:00" />
+    <lastUpdated value="2017-07-17T16:18:51.054+01:00" />
     <tag>
       <code value="1" />
     </tag>
@@ -9,7 +9,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cbcc" />
   </extension>
-  <url value="https://fhir.nhs.uk/3.0.1/StructureDefinition/NDOP-Consent-1.xml" />
+  <url value="https://fhir.nhs.uk/STU3/StructureDefinition/NDOP-Consent-1.xml" />
   <version value="1.0.0" />
   <name value="NDOP-Consent-1.xml" />
   <title value="NDOP-Consent-1.xml" />
@@ -370,7 +370,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-SourceOfOptOut-1" />
+        <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-SourceOfOptOut-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -9429,7 +9429,7 @@
       <sliceName value="SourceofOptOut" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-SourceOfOptOut-1" />
+        <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-SourceOfOptOut-1" />
       </type>
     </element>
     <element id="Consent.identifier">
