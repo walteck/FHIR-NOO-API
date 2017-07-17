@@ -4,7 +4,7 @@ keywords: period, consent
 tags: [profile,element,patient]
 sidebar: overview_sidebar
 permalink: consent_period.html
-summary: "low level details for the National Opt-Out 'period' element"
+summary: "low level details for the National Data Opt-out 'period' element"
 ---
 {% include important.html content="The period element described is used to TO DO........." %}
 

@@ -4,7 +4,7 @@ keywords: usecase,use case, user stories, epics, scenarios, nhsnumber
 tags: [foundations,use_case,userstories, epics, scenarios]
 sidebar: engage_sidebar
 permalink: engage_user_stories.html
-summary: "User stories to search for a National Opt-Out FHIR&reg; Profile."
+summary: "User stories to search for a National Data Opt-out FHIR&reg; Profile."
 ---
 
 ## Use Case 1 ##
@@ -16,7 +16,7 @@ As a patient I wish to be able to have the choice and control over how my data t
 ### Solution - NHS Choices ###
 
 [NHS Choices](http://www.nhs.uk/pages/home.aspx) is the official website of the National Health Service (NHS) in England, providing a multi-channel service for everyone within the NHS and social care. This health information service that provides patients with the tools they need to effectively self manage certain aspects of their healthcare by providing them with the necessary tools to do so. 
-The **National Opt-Out Model** is one of those tools that will be made available to patients via NHS Choices, enabling them to control their data sharing preferences.
+The **National Data Opt-out Model** is one of those tools that will be made available to patients via NHS Choices, enabling them to control their data sharing preferences.
 
 
 ## Use Case 2 ##

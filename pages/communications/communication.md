@@ -5,7 +5,7 @@ tags: [comms,contac, help]
 sidebar: overview_sidebar
 toc: false
 permalink: communications.html
-summary: "Help and Support with the National Opt-Out API"
+summary: "Help and Support with the National Data Opt-out API"
 ---
 <div Style="width:30%;float:right;margin-left:3%">
   <a class="twitter-timeline" href="https://twitter.com/INTEROPenAPI" data-tweet-limit="3">Tweets by INTEROpen</a>
@@ -19,7 +19,7 @@ summary: "Help and Support with the National Opt-Out API"
 
 ### NHS Digital 
 
-In the event that you require any assistance or have any queries with the implementation of the National Opt-Out API, the following communication channels are available: 
+In the event that you require any assistance or have any queries with the implementation of the National Data Opt-out API, the following communication channels are available: 
 
 **E-Mail:** <interoperabilityteam@nhs.net>
 

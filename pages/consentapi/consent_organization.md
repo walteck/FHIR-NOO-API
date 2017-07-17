@@ -4,12 +4,12 @@ keywords: orgnaization
 tags: [profile,element,organization]
 sidebar: profiles_sidebar
 permalink: consent_organization.html
-summary: "low level details for the National Opt-Out 'organization' element"
+summary: "low level details for the National Data Opt-out 'organization' element"
 ---
 
 ### Element Usage ###
 
-National Opt-Out uses consent.organization to capture the custodian organization that manages the consent. This will be fixed to NHS Digital.
+National Data Opt-out uses consent.organization to capture the custodian organization that manages the consent. This will be fixed to NHS Digital.
 
 ### organization ###
 

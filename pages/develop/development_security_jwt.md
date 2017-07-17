@@ -4,7 +4,7 @@ keywords: spine, ssp, integration, audit, jwt, provenance
 tags: [Security]
 sidebar: overview_sidebar
 permalink: development_security_jwt.html
-summary: "Overview of how audit and provenance data is expected to be transported over the National Opt-Out FHIR interfaces using JWT."
+summary: "Overview of how audit and provenance data is expected to be transported over the National Data Opt-out FHIR interfaces using JWT."
 ---
 
 ## Cross Organisation Audit & Provenance using JWT ##

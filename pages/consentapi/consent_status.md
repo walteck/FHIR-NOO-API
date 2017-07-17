@@ -4,7 +4,7 @@ keywords: status, consent
 tags: [profile,element,status]
 sidebar: overview_sidebar
 permalink: consent_status.html
-summary: "low level details for the National Opt-Out 'status' element"
+summary: "low level details for the National Data Opt-out 'status' element"
 ---
 ### Element Usage ###
 
@@ -32,7 +32,7 @@ Example of correct usage
 Examples of incorrect usage
 
 |Usage| Element| examples| Comments|
-|![Cross](images/cross.png)|`status`|proposed |Although status is a valid FHIR code, it is an invalid NOOM code.|
+|![Cross](images/cross.png)|`status`|proposed |Although status is a valid FHIR code, it is an invalid NDOP code.|
 
 ### Examples ###
 

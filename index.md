@@ -1,20 +1,20 @@
 ---
-title: Introduction to National Opt-Out Model
+title: Introduction to National Data Opt-out Programme
 keywords: noo, opt-out
 tags: [getting_started]
 sidebar: overview_sidebar
 permalink: index.html
 toc: true
-summary: A brief introduction to getting started with the National Opt-Out FHIR&reg; API
+summary: A brief introduction to getting started with the National Data Opt-out Programme FHIR&reg; API
 ---
 
-{% include important.html content="This site is under active development by the interoperability messaging team and is intended to provide all the technical resources you need to successfully deploy a National Opt-Out Profile. Some areas are being formulated and iterative updates to content will be added on a regular basis." %}
+{% include important.html content="This site is under active development by the interoperability messaging team and is intended to provide all the technical resources you need to successfully deploy a National Data Opt-out Programme Profile. Some areas are being formulated and iterative updates to content will be added on a regular basis." %}
 
-{% include warning.html content="This site is provided for information only and is intended for those engaged with NHS Digital in the development of the National Opt-Out FHIR&reg; API. It is advised not to develop against these specifications until a formal announcement has been made." %}
+{% include warning.html content="This site is provided for information only and is intended for those engaged with NHS Digital in the development of the National Data Opt-out Programme FHIR&reg; API. It is advised not to develop against these specifications until a formal announcement has been made." %}
 
 # The national data opt-out and why it's needed #
 
-Extracted from [NHS Digital National-Opt-Out](https://digital.nhs.uk/national-data-opt-out)
+Extracted from [National Data Opt-out Programme](https://digital.nhs.uk/national-data-opt-out)
 
 The National Data Guardian (NDG) review of data security and consent proposed a new consent/opt-out model for data sharing to enable people to make an informed decision about how their individual data will be used.
 

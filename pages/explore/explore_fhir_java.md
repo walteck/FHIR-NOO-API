@@ -20,7 +20,7 @@ consent.addstatus()
 	.setValue("active");
 consent.addCategory()
 	.setSystem("https://fhir.nhs.uk/ValueSet/noom-category-type-1")
-	.setCode("NOOM");
+	.setCode("NDOP");
 consent.addPatient()
 	.setReference("https://nww.spine.nhs.uk/4505577104");
 consent.addconcentingParty()

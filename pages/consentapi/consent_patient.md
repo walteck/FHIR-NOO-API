@@ -4,7 +4,7 @@ keywords: patient, consent
 tags: [profile,element,patient]
 sidebar: overview_sidebar
 permalink: consent_patient.html
-summary: "low level details for the National Opt-Out 'patient' element"
+summary: "low level details for the National Data Opt-out 'patient' element"
 ---
 ### Element Usage ###
 

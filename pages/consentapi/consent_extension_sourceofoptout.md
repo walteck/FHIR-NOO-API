@@ -19,7 +19,7 @@ The SourceOfOptOut extension is used to capture the mechanism used to set the pa
 
 ## Valueset 
 
-National Opt-Out supports the following source of opt-out codes:
+National Data Opt-out supports the following source of opt-out codes:
 
 |Code|Display|Definition|
 |OP|OP|Online Process|

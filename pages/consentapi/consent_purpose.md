@@ -4,7 +4,7 @@ keywords: purpose, consent
 tags: [profile,element,purpose]
 sidebar: overview_sidebar
 permalink: consent_purpose.html
-summary: "low level details for the National Opt-Out 'purpose' element"
+summary: "low level details for the National Data Opt-out 'purpose' element"
 ---
 
 ## id Implementation Guide ##

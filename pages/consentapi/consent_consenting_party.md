@@ -4,7 +4,7 @@ keywords: party, consent
 tags: [profile,element,patient]
 sidebar: overview_sidebar
 permalink: consent_consenting_party.html
-summary: "low level details for the National Opt-Out 'consentingParty' element"
+summary: "low level details for the National Data Opt-out 'consentingParty' element"
 ---
 ### Element Usage ###
 

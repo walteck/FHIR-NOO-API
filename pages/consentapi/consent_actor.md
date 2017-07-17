@@ -4,7 +4,7 @@ keywords: actor, consent
 tags: [profile,element,patient]
 sidebar: overview_sidebar
 permalink: consent_actor.html
-summary: "low level details for the National Opt-Out 'actor' element"
+summary: "low level details for the National Data Opt-out 'actor' element"
 ---
 
 ### Element Usage ###
@@ -29,7 +29,7 @@ Example of correct usage
 Examples of incorrect usage
 
 |Usage| Element| examples| Comments|
-|![Cross](images/cross.png)|`role`| GP| invalid code, not supported by NOOM.|
+|![Cross](images/cross.png)|`role`| GP| invalid code, not supported by NDOP.|
 |![Cross](images/cross.png)|`reference`| G1231231 | Valid national code, but not url to locate it.
 
 

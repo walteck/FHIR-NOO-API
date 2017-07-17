@@ -11,9 +11,9 @@ summary: "All about the common foundation capabilities."
 
 ## Purpose ##
 
-The foundations capability cover the basic API requirements and prerequisites to utilise the National Opt-Out API.
+The foundations capability cover the basic API requirements and prerequisites to utilise the National Data Opt-out API.
 
-{% include important.html content="In order to successfully make us of the National Opt-Out API, initially a level of pre-existing accredited Spine connectivity will be required along with some FHIR foundation API capabilities." %}
+{% include important.html content="In order to successfully make us of the National Data Opt-out API, initially a level of pre-existing accredited Spine connectivity will be required along with some FHIR foundation API capabilities." %}
 
 {% include custom/roadmap.html content="Over time the necessity to have access to pre-existing spine services (i.e. PDS and SDS integration) is likely to be replaced by FHIR based equivalents." %}
 
@@ -31,5 +31,5 @@ Please also refer to [Development Guidance - FHIR API Guidance - Common API Guid
 
 ### API Use Cases ###
 
-- [National Opt-Out API use cases](engage_use_case_api.html)
+- [National Data Opt-out API use cases](engage_use_case_api.html)
 - [Get the FHIR conformance profile](foundations_use_case_get_the_fhir_conformance_profile.html)

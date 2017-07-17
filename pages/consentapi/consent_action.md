@@ -4,7 +4,7 @@ keywords: action, consent
 tags: [profile,element,action]
 sidebar: overview_sidebar
 permalink: consent_action.html
-summary: "low level details for the National Opt-Out 'action' element"
+summary: "low level details for the National Data Opt-out 'action' element"
 ---
 
 ### Element Usage ###

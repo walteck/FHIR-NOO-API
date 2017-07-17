@@ -4,19 +4,19 @@ keywords: interaction, consent
 tags: [interaction]
 sidebar: overview_sidebar
 permalink: development_interactions.html
-summary: "National Opt-Out Spine Interactions"
+summary: "National Data Opt-out Spine Interactions"
 ---
 
-## National Opt-Out Spine RESTful Interaction Diagram ##
+## National Data Opt-out Spine RESTful Interaction Diagram ##
 
-<img src="images/NOOMInteractions2.png">
+<img src="images/NDOPInteractions2.png">
 
 
-## Register Patients National Opt-Out Preferences Interaction ##
+## Register Patients National Data Opt-out Preferences Interaction ##
 
-The client system will construct a XML body containing NOOM preferences and submit this to the ACS via Spine services using a RESTful create interaction.
+The client system will construct a XML body containing NDOP preferences and submit this to the ACS via Spine services using a RESTful create interaction.
 
-- ***Sender:*** Any NOOM client
+- ***Sender:*** Any NDOP client
 - ***Receiver:*** Spine 2
 - ***RESTful API Interaction:*** POST [base]/consent
 
@@ -24,18 +24,18 @@ The client system will construct a XML body containing NOOM preferences and subm
 
 **Responses**
 
-Assuming successful URL submission, there are several possible responses to the NOOM request:
+Assuming successful URL submission, there are several possible responses to the NDOP request:
 
-- HTTP 201-Record Created: The entry has been successfully created and the NOOM returns an HTTP Location header containing the 'server' assigned logical Id of the created resource.
+- HTTP 201-Record Created: The entry has been successfully created and the NDOP returns an HTTP Location header containing the 'server' assigned logical Id of the created resource.
 - HTTP 400-Bad Request: Resource could not be parsed or failed basic FHIR validation rules
 - HTTP 404-Not Found: Resource type not supported, or not a FHIR end-point
 - HTTP 422-Unprocessable Entity: The proposed resource violated applicable FHIR profiles or server business rules.
 
-## Retrieve Patients National Opt-Out Preferences Interaction ##
+## Retrieve Patients National Data Opt-out Preferences Interaction ##
 
-The client system will perform a RESTful search interaction for current patient preferences located on the National Opt-Out service.
+The client system will perform a RESTful search interaction for current patient preferences located on the National Data Opt-out service.
 
-- ***Sender:***Any NOOM Client
+- ***Sender:***Any NDOP Client
 - ***Receiver:***Spine 2
 - ***RESTful API Interaction:***GET [base]/consent[parameters] 
 
@@ -43,7 +43,7 @@ The client system will perform a RESTful search interaction for current patient 
 
 **Responses**
 
-The search results **shall** return one or two instances of the patients National Opt-Out preferences, depending on search parameters utilized. Each instance **shall** have one of the following preferences:
+The search results **shall** return one or two instances of the patients National Data Opt-out preferences, depending on search parameters utilized. Each instance **shall** have one of the following preferences:
 
 - HRESCH - Research Opt-Out
 - HOPERAT - Planning and Commissioning Opt-Out
@@ -52,23 +52,23 @@ Assuming successful URL submission, there is one possible outcome to a search re
 
 - HTTP 200-Request was successfully executed
 
-The NOOM FHIR server determines which of the set of resources it serves meet the specific criteria, and returns the results of the search in the HTTP response as a 'searchset' bundle or as single consent resource.
+The NDOP FHIR server determines which of the set of resources it serves meet the specific criteria, and returns the results of the search in the HTTP response as a 'searchset' bundle or as single consent resource.
 
 Note: Although an HTTP response 200 OK indicates the request was successful, the bundle could return a 0 (zero) total value indicating no record was found. This is an XML example of the Bundle with a 0 (zero) total value indicating no record was found.
 
-## Update Patients National Opt-Out Preferences Interaction ##
+## Update Patients National Data Opt-out Preferences Interaction ##
 
-The client system will perform a RESTful update interaction to amend the patients National Opt-Out preferences and submit a revised body to the NOOM service.
+The client system will perform a RESTful update interaction to amend the patients National Data Opt-out preferences and submit a revised body to the NDOP service.
 
-- ***Sender:***Any NOOM Client
+- ***Sender:***Any NDOP Client
 - ***Receiver:***Spine 2
 - ***RESTful API Interaction:***PUT [base]/consent[parameters] 
 
 **Responses**
 
-Assuming successful URL submission, there are several possible responses to the NOOM request:
+Assuming successful URL submission, there are several possible responses to the NDOP request:
 
-- HTTP 200-OK: The entry has been successfully updated and the NOOM returns an HTTP Location header containing the 'server' assigned logical Id of the updated resource.
+- HTTP 200-OK: The entry has been successfully updated and the NDOP returns an HTTP Location header containing the 'server' assigned logical Id of the updated resource.
 - HTTP 400-Bad Request: Resource could not be parsed or failed basic FHIR validation rules
 - HTTP 404-Not Found: Resource type not supported, or not a FHIR end-point
 - HTTP 422-Unprocessable Entity: The proposed resource violated applicable FHIR profiles or server business rules.

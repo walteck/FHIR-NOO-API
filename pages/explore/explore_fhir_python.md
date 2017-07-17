@@ -12,7 +12,7 @@ summary: "FHIR Python client using Smart on FHIR"
 ```python
 from fhirclient import client
 settings = {
-    'app_id': 'NOOM',
+    'app_id': 'NDOP',
     'api_base': 'https://fhir.nhs.uk'
 }
 smart = client.FHIRClient(settings=settings)

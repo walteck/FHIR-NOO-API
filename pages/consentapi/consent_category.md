@@ -4,7 +4,7 @@ keywords: category, consent
 tags: [profile,element,category]
 sidebar: overview_sidebar
 permalink: consent_category.html
-summary: "low level details for the National Opt-Out 'category' element"
+summary: "low level details for the National Data Opt-out 'category' element"
 ---
 
 ### Element Usage ###
@@ -20,12 +20,12 @@ Category uses the Consent.category element to distinguish the national opt-out c
 Example of correct usage
 
 |Usage| Element| examples| Comments|
-|![Tick](images/tick.png)|`category`| NOOM| A valid category code to identify consent instance as a NOOM type.
+|![Tick](images/tick.png)|`category`| NDOP| A valid category code to identify consent instance as a NDOP type.
 
 Examples of incorrect usage
 
 |Usage| Element| examples| Comments|
-|![Cross](images/cross.png)|`category`| ICOL|Code taken from http://hl7.org/fhir/v3/ActCode. Not use by NOOM.|
+|![Cross](images/cross.png)|`category`| ICOL|Code taken from http://hl7.org/fhir/v3/ActCode. Not use by NDOP.|
 
 
 XML Example
@@ -34,7 +34,7 @@ XML Example
 <category>
 	<coding>
 		<system value="https://fhir.nhs.uk/ValueSet/noom-category-type-1"/>
-		<code value="NOOM"/>
+		<code value="NDOP"/>
 	</coding>
 </category>
 ```
@@ -46,7 +46,7 @@ JSON Example
   "category": {
     "coding": {
       "system": { "-value": "https://fhir.nhs.uk/ValueSet/noom-category-type-1" },
-      "code": { "-value": "NOOM" }
+      "code": { "-value": "NDOP" }
     }
   }
 }

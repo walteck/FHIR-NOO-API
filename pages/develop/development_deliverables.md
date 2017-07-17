@@ -1,17 +1,17 @@
 ---
-title: National Opt-Out | Reference
+title: National Data Opt-out | Reference
 keywords: development Reference
 tags: [development]
 sidebar: overview_sidebar
 permalink: development_deliverables.html
-summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of National Opt-Out API."
+summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of National Data Opt-out API."
 ---
 
-# National Opt-Out Profiles:
+# National Data Opt-out Profiles:
 
 | Profile | ValueSets |
 | :--------- |:-------- |
-| [NOOM-Consent-1](https://simplifier.net/TestNationalOptOutPr/NOOM-Consent-1xml) | 
+| [NDOP-Consent-1](https://simplifier.net/TestNationalOptOutPr/NDOP-Consent-1xml) | 
 
 # Identifiers #
 
