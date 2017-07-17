@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-	<url value="https://fhir.nhs.uk/noom-categories-1"/>
+	<url value="https://fhir.nhs.uk/ndop-categories-1"/>
 	<version value="1.0.0"/>
-	<name value="Opt Out Categories CodeSystem"/>
+	<name value="National Data Opt-out Programme Categories CodeSystem"/>
 	<status value="draft"/>
 	<publisher value="NHS Digital"/>
 	<contact>
@@ -17,8 +17,8 @@
 	<valueSet value="https://fhir.nhs.uk/ValueSet/noom-category-1"/>
 	<content value="complete"/>
 	<concept>
-		<code value="NOOM"/>
-		<display value="National Opt-Out"/>
+		<code value="NDOP"/>
+		<display value="National Data Opt-out Programme"/>
 	</concept>
 	<concept>
 		<code value="T2"/>
