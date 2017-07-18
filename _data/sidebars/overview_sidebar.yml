@@ -1,13 +1,13 @@
 entries:
-- title: National Opt-Out
-  product: National Opt-Out<br/>
+- title: National Data Opt-out Programme
+  product: National Data Opt-out Programme<br/>
   version: 1.0.0-alpha.1
   levels: one
   folders:
   - title: Overview
     output: web
     folderitems:
-    - title: Introduction
+    - title: National Data Opt-out Programme API
       url: /index.html
       output: web, pdf
       type: homepage
@@ -28,7 +28,7 @@ entries:
     output: web
     folderitems:
     - title: Overview
-      url: /engage.html
+      url: /engage_ndop_overview.html
       output: web, pdf
       type: homepage
     - title: Use Cases
@@ -81,21 +81,7 @@ entries:
         - title: Cross Organnization Audit & Provenance using JWT
           url: /development_security_jwt.html
           output: web      
-      - title: FHIR Clients
-        output: web        
-        subfolderitems:    
-        - title: Java Script | SMART on FHIR
-          url: /explore_fhir_js.html
-          output: web
-        - title: C# | FHIR .NET
-          url: /explore_fhir_c.html
-          output: web
-        - title: Java | HAPI NET
-          url: /explore_fhir_java.html
-          output: web
-        - title: Python | Smart on FHIR
-          url: /explore_fhir_python.html
-          output: web    
+
   - title: Test
     output: web
     folderitems:
@@ -116,33 +102,7 @@ entries:
       output: web
     - title: FHIR Server Tests
       url: /test_fhir_server.html
-      output: web     
-  - title: Deploy
-    output: web
-    folderitems:
-    - title: Overview | Coming soon
-      url: /support_coming_soon.html
-      output: web
-
-    - title: Deploy
-    output: web
-    folderitems:
-    - title: Pilot
-      url: /deploy_pilot.html
-      output: web
-    - title: Live
-      url: /deploy_live.html
-      output: web
-      
-  - title: Help & Support
-    output: web
-    folderitems:
-    - title: Frequently Asked Questions (FAQ)
-      url: /communications_faq.html
-      output: web
-    - title: Communication Channels
-      url: /communications.html
-      output: web    
+      output: web      
       
   - title: Tags
     output: web
