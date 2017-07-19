@@ -1,16 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-18T09:58:20.702+01:00" />
+    <lastUpdated value="2017-07-19T14:36:38.778+01:00" />
   </meta>
   <url value="https://fhir.nhs.uk/STU3/StructureDefinition/extension-optoutsource-1" />
+  <version value="1.0.0" />
   <name value="Extension-Opt-out-Source-1" />
   <status value="draft" />
-  <date value="2017-07-18T09:52:29.3736+01:00" />
+  <date value="2017-07-19T14:28:30.780598+01:00" />
+  <publisher value="NHS Digital" />
+  <contact>
+    <name value="Interoperability Team" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Extension for Consent to capture the source of the opt-out e.g online portal, telephone, etc.." />
+  <copyright value="Copyright © 2017 Health and Social Care Information Centre.&#xD;&#xA;NHS Digital is the trading name of the Health and Social Care Information Centre.&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html" />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <contextType value="extension" />
+  <contextType value="resource" />
   <context value="Consent" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
@@ -301,7 +313,7 @@
       <isSummary value="true" />
       <binding>
         <strength value="required" />
-        <description value="Opt-out Source" />
+        <description value="Opt-out source" />
         <valueSetUri value="https://fhir.nhs.uk/opt-out-source-1" />
       </binding>
       <mapping>
@@ -589,7 +601,7 @@
       <comment value="Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely." />
       <requirements value="This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Coding.userSelected" />
         <min value="0" />
@@ -694,7 +706,7 @@
       <max value="1" />
       <binding>
         <strength value="required" />
-        <description value="Opt-out Source" />
+        <description value="Opt-out source" />
         <valueSetUri value="https://fhir.nhs.uk/opt-out-source-1" />
       </binding>
     </element>
@@ -717,10 +729,6 @@
       </extension>
       <path value="Extension.valueCodeableConcept.coding.display" />
       <min value="1" />
-    </element>
-    <element>
-      <path value="Extension.valueCodeableConcept.coding.userSelected" />
-      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>
