@@ -17,13 +17,12 @@ summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of Nation
 
 | identifier | URI | Comment |
 |--------------------------------------------|----------|----|
-| `Logical ID` | https://fhir.nhs.uk/Consent/Id | Consent record identifier |
+| `Logical ID` | https://fhir.nhs.uk/Consent/[id] | Consent record identifier |
 | `Patient` | https://proxy.pds.nhs.uk | Patient |
 | `consentingParty` | https://proxy.sds.nhs.uk | Patient |
 |`actor`|https://proxy.sds.nhs.uk or https://proxy.pds.nhs.uk | Patient or Practitioner|
 |`organization`|https://proxy.sds.nhs.uk |NHS Digital|
 
 
-```
-TODO: Insert a picture here to show the overall process (e.g. TLS, Setting Audit headers, etc)]
-```
+
+{% include warning.html content="The URI's for PDS and SDS are not confirmed and are subject to change." %}
