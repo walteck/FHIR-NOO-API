@@ -55,9 +55,25 @@ Assuming successful URL submission, there is one possible outcome to a search re
 
 - HTTP 200-Request was successfully executed
 
-The NDOP FHIR server determines which of the set of resources it serves meet the specific criteria, and returns the results of the search in the HTTP response as a 'searchset' bundle or as single consent resource.
+The NDOP FHIR server determines which of the set of resources it serves meet the specific criteria, and returns the results of the search in the HTTP response as a 'searchset' bundle or where a specific logical ID forms the only search parameter, as single consent resource.
 
-Note: Although an HTTP response 200 OK indicates the request was successful, the bundle could return a 0 (zero) total value indicating no record was found. This is an XML example of the Bundle with a 0 (zero) total value indicating no record was found.
+Note: Although an HTTP response 200 OK indicates the request was successful, the bundle could return a 0 (zero) total value indicating no record was found. Below is an XML example of a Bundle with a 0 (zero) total value indicating no record was found. 
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="cb176b22-5b78-4b88-8c6a-adca33ebc3"/>
+    <meta>
+    <lastUpdated value="2017-07-17T12:39:43Z"/>
+    </meta>
+    <type value="searchset"/>
+    <total value="0"/>
+    <link>
+    <relation value="self"/>
+    <url value="http://test.fhir.org/r3/Consent?search-id=08da8bc9-689a-40fc-b414-c63acf1056&amp;&amp;patient=https%3A//nww.spine.nhs.uk/4505577104&amp;category=NOOM&amp;_sort=_id"/>
+    </link>
+</Bundle>
+```
 
 ## Update Patients National Data Opt-out Preferences Interaction ##
 
@@ -71,7 +87,7 @@ The client system will perform a RESTful update interaction to amend the patient
 
 **Responses**
 
-Assuming successful URL submission, there are several possible responses to the NDOP request:
+Assuming success, there are several possible responses to the NDOP request:
 
 - HTTP 200-OK: The entry has been successfully updated and the NDOP returns an HTTP Location header containing the 'server' assigned logical Id of the updated resource.
 - HTTP 400-Bad Request: Resource could not be parsed or failed basic FHIR validation rules
