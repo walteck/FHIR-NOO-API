@@ -12,6 +12,7 @@ summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of Nation
 | Profile | ValueSets |
 | :--------- |:-------- |
 | [NDOP-Consent-1](https://simplifier.net/TestNationalOptOutPr/NDOP-Consent-1xml) | 
+| [OperationOutcome-1](https://simplifier.net/TestNationalOptOutPr/NDOP-Consent-1xml) | 
 
 # Identifiers #
 
