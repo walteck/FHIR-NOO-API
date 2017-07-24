@@ -44,7 +44,7 @@ National Data Opt-out Source of Opt-Out extension
 
 The example below demonstrates the structure of a constructed XML body that can be submitted to the National Data Opt-out service via a HTTP POST. This will set the preferences for HRESCH only.
 
-{% include custom/post.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content1="POST" text1="https://nww.spine.nhs.uk/4505577104" %}
+{% include custom/post.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="Consent" content1="POST" text1="https://nww.spine.nhs.uk/4505577104" %}
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -87,13 +87,13 @@ The example below demonstrates the structure of a constructed XML body that can 
 </Consent>
 ```
 
-{% include custom/get.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content2="GET" text1="https://nww.spine.nhs.uk/4505577104" text2="NDOP" text3="HRESCH"%}
+{% include custom/get.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="Consent" content2="GET" text1="https://nww.spine.nhs.uk/4505577104" text2="NDOP" text3="HRESCH"%}
 
-{% include custom/put.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content2="PUT" text2="https://nww.spine.nhs.uk/4505577104" %}
+{% include custom/put.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="Consent" content2="PUT" text2="https://nww.spine.nhs.uk/4505577104" %}
 
 ## Searching National Data Opt-out History ##
 
-{% include custom/history.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content2="GET" id="785f7cc6-f63b-41fc-9bd4-2d09df5606f9" text1="https://nww.spine.nhs.uk/4505577104" text2="HRESCH" %}
+{% include custom/history.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="Consent" content2="GET" id="785f7cc6-f63b-41fc-9bd4-2d09df5606f9" text1="https://nww.spine.nhs.uk/4505577104" text2="HRESCH" %}
 
 
 

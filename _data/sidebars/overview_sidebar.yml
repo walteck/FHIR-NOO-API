@@ -11,9 +11,6 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
-    - title: Development Roadmap
-      url: /design_development_roadmap.html
-      output: web
     - title: Semantic Versioning
       url: /design_product_versioning.html
       output: web
@@ -62,9 +59,6 @@ entries:
     - title: FHIR&reg; capabilityStatement
       url: /foundations_use_case_get_the_fhir_conformance_profile.html
       output: web                
-    - title: API Foundations
-      url: /foundations.html
-      output: web
     - title: Reference
       url: /development_deliverables.html
       output: web 

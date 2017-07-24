@@ -11,13 +11,13 @@ GET {{include.base}}{{include.resource}}?patient=[NHS Number]</div>
 Return {{include.resource}} resource that has a patient NHS number of {{include.text1}}.</pre>
 </div>
 
-<p>Return all current patients consent instances that exist with the supplied patients NHS number and with a category of "NOOM" to indicate these are National Opt-Out records that exclude Type 2 objections.</p> 
+<p>Return all current patients consent instances that exist with the supplied patients NHS number and with a category of "NDOP" to indicate these are National Opt-Out records that exclude Type 2 objections.</p> 
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET {{include.base}}{{include.resource}}?patient=[NHS Number]&category=[Category Type]</div>
 
 <div class="language-http highlighter-rouge">
-<pre class="highlight"><code><span class="err">GET {{include.base}}{{include.resource}}?patient=https://nww.spine.nhs.uk/4505577104&category=NOOM
+<pre class="highlight"><code><span class="err">GET {{include.base}}{{include.resource}}?patient=https://nww.spine.nhs.uk/4505577104&category=NDOP
 </span></code>
 Return {{include.resource}} resource that has a patient value of {{include.text1}} and a category of {{include.text2}}.</pre>
 </div>
