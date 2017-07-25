@@ -3,7 +3,7 @@ title: Introduction to National Data Opt-out Programme
 keywords: ndop, opt-out, overview
 tags: [ndop_overview]
 sidebar: overview_sidebar
-permalink: engage_ndop_overview.html
+permalink: overview_ndop.html
 toc: true
 summary: A brief introduction to the National Data Opt-out Programme
 ---
@@ -37,5 +37,3 @@ For example, if you're a GP, your patients may ask you questions about the opt-o
 ### When the opt-out is happening ###
 
 The national data opt-out will be introduced in a phased way, starting with the ability for patients to register their opt-out preferences later this year (2017). The ability for the health and care system to be able to uphold those opt-out preferences is expected to start with NHS Digital and be achieved incrementally by all health and care providers through to 2020.
-
-

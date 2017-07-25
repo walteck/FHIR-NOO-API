@@ -11,6 +11,9 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
+    - title: About NDOP
+      url: /overview_ndop.html
+      output: web
     - title: Semantic Versioning
       url: /design_product_versioning.html
       output: web
@@ -21,51 +24,36 @@ entries:
       url: /overview_glossary.html
       output: web
 
-  - title: Engage
-    output: web
-    folderitems:
-    - title: Overview
-      url: /engage_ndop_overview.html
-      output: web, pdf
-      type: homepage
-    - title: Use Cases
-      url: /engage_user_stories.html
-      output: web
-    - title: Case Studies
-      url: /engage_case_studies.html
-      output: web
-  - title: Design & Build
+  - title: Resources
     output: web
     folderitems:
     - title: Interface Overview
       url: /development_overview.html
-      output: web
-    - title: RESTful Interactions
-      url: /development_interactions.html
-      output: web     
+      output: web    
       subfolders:         
-      - title: FHIR&reg; Profile | Consent
+      - title: Security & Privacy
         output: web
         subfolderitems:
-        - title: Elements & RESTful API
+        - title: Consent
           url: /development_elements.html
           output: web
-        - title: Structure Definitions
-          url: /development_rendered_consent.html
+      
+      - title: Foundations
+        output: web
+        subfolderitems:
+        - title: capabilityStatement
+          url: /foundations_use_case_get_the_fhir_conformance_profile.html
           output: web
-        - title: Profile Examples
-          url: /development_consent_examples.html
-          output: web  
-    - title: FHIR&reg; capabilityStatement
-      url: /foundations_use_case_get_the_fhir_conformance_profile.html
-      output: web                
-    - title: Reference
-      url: /development_deliverables.html
-      output: web 
-      subfolders:
+        - title: Valueset
+          url: /foundations_valuesets.html
+          output: web        
+
       - title: API Guidance | FHIR&reg; 
         output: web
         subfolderitems:
+        - title: RESTful Interactions
+          url: /development_interactions.html
+          output: web 
         - title: Open Source
           url: /development_fhir_open_source_guidance.html
           output: web
@@ -75,29 +63,10 @@ entries:
         - title: Cross Organnization Audit & Provenance using JWT
           url: /development_security_jwt.html
           output: web      
-
-  - title: Test
-    output: web
-    folderitems:
-    - title: Overview
-      url: /test_overview.html
-      output: web
-    - title: Test Scenarios
-      url: /test_scenarios.html
-      output: web  
-    - title: Test Data
-      url: /test_data.html
-      output: web  
-    - title: User Acceptance Testing (UAT)
-      url: /test_uat.html
-      output: web  
-    - title: Security Testing
-      url: /test_security.html
-      output: web
-    - title: FHIR Server Tests
-      url: /test_fhir_server.html
-      output: web      
-      
+    - title: Reference
+      url: /development_deliverables.html
+      output: web 
+        
   - title: Tags
     output: web
     folderitems:

@@ -46,46 +46,7 @@ The example below demonstrates the structure of a constructed XML body that can 
 
 {% include custom/post.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="Consent" content1="POST" text1="https://nww.spine.nhs.uk/4505577104" %}
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<Consent xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../Schemas/consent.xsd">
-	<id value="783ffeef-538e-4a17-bed2-983a382ccdd7"/>
-	<meta>
-		<profile value="https://fhir.nhs.uk/StructureDefinition/noom-consent-1"/>
-	</meta>
-	<status value="inactive"/>
-	<category>
-		<coding>
-			<system value="https://fhir.nhs.uk/ValueSet/noom-category-type-1"/>
-			<code value="NDOP"/>
-		</coding>
-	</category>
-    <patient>
-    	<reference value="https://nww.spine.nhs.uk/4505577104"/> 
-    </patient>
-    <dateTime value="2017-02-01T11:15:33+00:00"/>
-    <consentingParty>
-    	<reference value="https://nww.spine.nhs.uk/4505577104"/>
-    </consentingParty>
-    <actor>
-        <role>
-            <coding>
-                <system value="http://hl7.org/fhir/v3/ParticipationType"/>
-                <code value="INF"/> 
-            </coding>
-        </role>
-        <reference>
-            <reference value="https://nww.spine.nhs.uk/4505577104"/>
-        </reference>
-    </actor>
-    <policyRule value="http://hl7.org/fhir/ConsentPolicy/opt-out"/>
-    <purpose> 
-        <system value="http://hl7.org/fhir/v3/ActReason"/> 
-        <code value="HOPERAT"/>
-        <display value="healthcare operations"/>
-    </purpose>
-</Consent>
-```
+<script src="https://gist.github.com/dxh73/199ddd4005e1759effb23ee8ed902f9f.js"></script>
 
 {% include custom/get.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="Consent" content2="GET" text1="https://nww.spine.nhs.uk/4505577104" text2="NDOP" text3="HRESCH"%}
 
