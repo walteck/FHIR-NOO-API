@@ -7,7 +7,7 @@ permalink: development_deliverables.html
 summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of National Data Opt-out API."
 ---
 
-{% include information.html content="Simplifier.net is used to as a temporary solution to provide rendered profiles until developer network is updated to support STU3 profiles"%}
+{% include important.html content="Simplifier.net is used to as a temporary solution to provide rendered profiles until developer network is updated to support STU3 profiles"%}
 
 # National Data Opt-out Profiles:
 
