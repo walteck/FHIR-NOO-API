@@ -17,10 +17,11 @@ summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of Nation
 | [OperationOutcome-1](https://simplifier.net/TestNationalOptOutPr/NDOP-Consent-1xml) | 
 
 # National Data Opt-out Extensions
+
 |Extension|
 |---------|
 | [Extension-ActorPerson-1](https://simplifier.net/NOOM/extension-actorperson-1)|
-| [Extension-Extension-Opt-out-Source-1](https://simplifier.net/NOOM/extension-optoutsource-1)
+| [Extension-Extension-Opt-out-Source-1](https://simplifier.net/NOOM/extension-optoutsource-1)|
 
 # Identifiers #
 
