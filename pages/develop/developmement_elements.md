@@ -18,8 +18,8 @@ summary: "Implentation guide on the characteristics and usage of the profiles el
 |`period`|dateTime|1..1|Period consent commences|
 |`dateTime`|dateTime|1..1|Date and time instance was last updated|Date+Time+TimeZone|
 |[`consentingParty`](consentingparty.html)|Reference|1..1|Reference to the patient NHS number traced from PDS|
-|[`actor`](consent_actor.html)|backbone|0..1|Captures the patient or healthcare professional who controls the consent|N/A|
-|`actor.role`|CodeableConcept|1..1|Valueset for the role|INF|
+|[`actor`](consent_actor.html)|backbone|1..*|Captures the patient or healthcare professional who controls the consent|N/A|
+|`actor.role`|CodeableConcept|1..1|Valueset for the role||
 |`actor.reference`|Reference|1..1|URL for the actor|
 |[`action`](consent_action.html)|CodeableConcept|1..1|to indicate what actions are controlled by the national opt-out policy|disclose|
 |[`organization`](consent_organization.html)|Reference|1..1|ODS code for the organization.|MUST be a URL|
@@ -30,12 +30,12 @@ summary: "Implentation guide on the characteristics and usage of the profiles el
 
 National Data Opt-out Source of Opt-Out extension
 
-`https://fhir.nhs.uk/StructureDefinition/extension-SourceOfOptOut-1`
+`https://fhir.nhs.uk/STU3/StructureDefinition/extension-optoutsource-1`
 
 
 |Name|Data Type|Card|Description|
 |----|---------|----|-----------|
-|[`sourceofoptout`](consent_extension_sourceofoptout.html)|extension|1..1|Extension to capture the source that defined the national opt-out preferences e.g NHS Choice, GP System|
+|[`OptoutSource`](consent_extension_sourceofoptout.html)|extension|1..1|Extension to capture the source that defined the national opt-out preferences e.g NHS Choice, GP System|
 
 
 ## FHIR&reg; RESTful API Examples ##
