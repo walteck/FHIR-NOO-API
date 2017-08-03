@@ -31,7 +31,7 @@ Client SHALL include the following additional HTTP request headers:
 | `TraceID`        | Consumer's TraceID (i.e. GUID/UUID) |
 | `From`           | Consumer's ASID |
 | `To`             | Provider's ASID |
-| `InteractionID`  | `urn:nhs:names:services:visitorsandmigrants:fhir:rest:read:metadata`|
+| `InteractionID`  | `urn:nhs:names:services:TODO:fhir:rest:read:metadata`|
 | `Authorization`      | This will carry the base64 encoded JSON web token required for audit - see [Cross Organisation Audit and Provenance](integration_cross_organisation_audit_and_provenance.html) for details. |
 
 #### Payload Request Body ####
