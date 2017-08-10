@@ -7,32 +7,38 @@ permalink: development_deliverables.html
 summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of National Data Opt-out API."
 ---
 
-{% include important.html content="Simplifier.net is used to as a temporary solution to provide rendered profiles until developer network is updated to support STU3 profiles"%}
+{% include important.html content="[Simplifier.net](https://simplifier.net/NOOM/~introduction) is used to as a temporary solution to provide rendered profiles until the fhir.nhs.uk server is updated to support STU3 rendered profiles. The links below will only resolve once this work has been completed."%}
 
 # National Data Opt-out Profiles:
 
-| Profile | ValueSets |
-| :--------- |:-------- |
-| [NDOP-Consent-1](https://simplifier.net/TestNationalOptOutPr/NDOP-Consent-1xml) | 
-| [OperationOutcome-1](https://simplifier.net/TestNationalOptOutPr/NDOP-Consent-1xml) | 
+|Profile| 
+|-------|
+| [NDOP-Consent-1](https://fhir.nhs.uk/STU3/StructureDefinition/NDOP-Consent-1.xml) | 
 
 # National Data Opt-out Extensions
 
 |Extension|
 |---------|
-| [Extension-ActorPerson-1](https://simplifier.net/NOOM/extension-actorperson-1)|
-| [Extension-Extension-Opt-out-Source-1](https://simplifier.net/NOOM/extension-optoutsource-1)|
+| [Extension-ActorPerson-1](https://fhir.nhs.uk/STU3/StructureDefinition/extension-actorperson-1)|
+| [Extension-Extension-Opt-out-Source-1](https://fhir.nhs.uk/STU3/StructureDefinition/extension-optoutsource-1)|
+
+
+# National Data Opt-out Valesets
+
+|Valeset|Description|
+|-------|-----------|
+|[ndop-category-1](https://fhir.nhs.uk/ValueSet/ndop-category-1)|
+|[ndop-preferences-1](https://fhir.nhs.uk/ValueSet/ndop-preferences-1)|
+|[Opt-Out-Source](https://fhir.nhs.uk/ValueSet/opt-out-source-1)|
 
 # Identifiers #
 
 | identifier | URI | Comment |
 |--------------------------------------------|----------|----|
 | `Logical ID` | https://fhir.nhs.uk/Consent/[id] | Consent record identifier |
-| `Patient` | https://proxy.pds.nhs.uk | Patient |
-| `consentingParty` | https://proxy.sds.nhs.uk | Patient |
-|`actor`|https://proxy.sds.nhs.uk or https://proxy.pds.nhs.uk | Patient or Practitioner|
-|`organization`|https://proxy.sds.nhs.uk |NHS Digital|
-
+| `Patient` | https://pds.nhs.uk | Patient |
+|`actor`|https://sds.nhs.uk or https://proxy.pds.nhs.uk | Patient or Practitioner|
+|`organization`|https://sds.nhs.uk |NHS Digital (X26)|
 
 
 {% include warning.html content="The URI's for PDS and SDS are not confirmed and are subject to change." %}

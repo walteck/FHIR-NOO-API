@@ -11,6 +11,8 @@ summary: "National Data Opt-out Spine Interactions"
 
 <img src="images/NDOPInteractions2.png">
 
+{% include important.html content="To prevent duplicate NDOP instances for a patient, implementers MUST perform a search prior to a create, to check for an existing instance, or use a [conditional create](https://www.hl7.org/fhir/http.html#ccreate) for creating new instances."%}
+
 
 ## Register Patients National Data Opt-out Preferences Interaction ##
 
@@ -48,8 +50,8 @@ The client system will perform a RESTful search interaction for current patient 
 
 The search results **shall** return one or two instances of the patients National Data Opt-out preferences, depending on search parameters utilized. Each instance **shall** have one of the following preferences:
 
-- HRESCH - Research Opt-Out
-- HOPERAT - Planning and Commissioning Opt-Out
+- RESCH - Research Opt-Out
+- PLAN - Planning and Commissioning Opt-Out
 
 Assuming successful URL submission, there is one possible outcome to a search request:
 

@@ -38,7 +38,7 @@ National Data Opt-out supports the following source of opt-out codes:
 **Example of Incorrect Usage**
 
 |Usage| Element| examples| Comments|
-|![Cross](images/cross.png)||`Extension-SourceOfOptOut-1`|NHS Choices|This is not a value defined within the valueset.|
+|![Cross](images/cross.png)|`Extension-SourceOfOptOut-1`|NHS Choices|This is not a value defined within the valueset.|
 
 
 On the wire XML example

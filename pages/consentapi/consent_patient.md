@@ -8,7 +8,7 @@ summary: "low level details for the National Data Opt-out 'patient' element"
 ---
 ### Element Usage ###
 
-patient uses the Consent.patient element to store the patients 10 digit NHS number which has been allocated to the instance via a trace using the patient demographics service (PDS). 
+patient uses the Consent.patient element to store a PDS reference that includes the patients 10 digit NHS number which has been allocated to the instance via a succesful PDS trace using the patient demographics service (PDS). 
 
 ### patient ###
 
@@ -19,7 +19,7 @@ patient uses the Consent.patient element to store the patients 10 digit NHS numb
 Example of correct usage
 
 |Usage| Element| examples| Comments|
-|![Tick](images/tick.png)|`patient`| https://proxy.pds.nhs.uk/4505577104| A valid NHS number with no spaces|
+|![Tick](images/tick.png)|`patient`| https://pds.nhs.uk/4505577104| A valid reference that includes the patients NHS number with no spaces|
 
 Examples of incorrect usage
 

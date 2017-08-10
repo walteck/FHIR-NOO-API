@@ -5,6 +5,7 @@ tags: interface, api
 sidebar: accessrecord_rest_sidebar
 permalink: development_overview.html
 summary: National Data Opt-out Programme RESTful API
+toc: false
 ---
 
 ## NDOP API Overview ##

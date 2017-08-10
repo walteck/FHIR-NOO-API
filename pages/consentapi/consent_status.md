@@ -12,22 +12,24 @@ Consent uses the Consent.status element to indicate whether the patient has agre
 
 {% include important.html content="Where a consent instance does not exist, it is implied that the patient has agreed to national opt-out data sharing." %}
 
-### id ###
+### status ###
 
 |Element Type| Data Type| Description|
 | ------------- | ------------- | ------------- |
 | code| string | The current status of the consent instance.|
 
 
-- `active` **MAY** be used to indicate that the patient has agreed to national opt-out data sharing.
-- `inactive` **MUST** be used to indicate that the patient has requested to Opt-Out. 
+- `active` is used to indicate that the patient has agreed to opt-out of national data sharing for specified purpose.
+- `inactive` is used to indicate that the patient has agreed to data sharing for a specified purpose. 
 - No other code is permitted to be used as a status of a consent instance.
-- Where a patient updates one or both of their preferences, the status code **MUST** be updated accordingly.
+- Where a patient updates one or both of their preferences, the status code will be updated accordingly.
 
 Example of correct usage
 
 |Usage| Element| examples| Comments|
-|![Tick](images/tick.png)|`status`| active|Patients data for research and/or planning and commissioning will be shared|
+|![Tick](images/tick.png)|`status`| active|Patients data for research and/or planning and commissioning will **NOT** be shared|
+|Usage| Element| examples| Comments|
+|![Tick](images/tick.png)|`status`| inactive|Patients data for research and/or planning and commissioning will be shared|
 
 Examples of incorrect usage
 
@@ -48,25 +50,6 @@ JSON Body
     "status": { "-value": "active" }
 }
 ```
-
-### Code Snippets
-
-```javascript
-TODO
-```
-
-```python
-TODO
-```
-
-```C#
-TODO
-```
-
-```java
-TODO
-```
-
 
 *Error Handling*
 

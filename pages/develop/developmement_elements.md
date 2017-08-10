@@ -15,17 +15,14 @@ summary: "Implentation guide on the characteristics and usage of the profiles el
 |[`status`](consent_status.html)|string|1..1|The current status of the consent instance|active,inactive|
 |[`category`](consent_category.html)|string|1..1|Category uses the Consent.category element to distinguish the national opt-out consent instances from any other consent instance|NDOP|
 |[`patient`](consent_patient.html)|Reference|1..1|Spine reference to the patients NHS number traced from PDS|
-|`period`|dateTime|1..1|Period consent commences|
 |`dateTime`|dateTime|1..1|Date and time instance was last updated|Date+Time+TimeZone|
-|[`consentingParty`](consentingparty.html)|Reference|1..1|Reference to the patient NHS number traced from PDS|
 |[`actor`](consent_actor.html)|backbone|1..*|Captures the patient or healthcare professional who controls the consent|N/A|
 |`actor.role`|CodeableConcept|1..1|Valueset for the role|INF=informant|
 |`actor.reference`|Reference|1..1|URL for the actor|
-|`actor.actorperson`|extension|0..1|String value to capture person|Mother of patient|
-|[`action`](consent_action.html)|CodeableConcept|1..1|to indicate what actions are controlled by the national opt-out policy|disclose|
 |[`organization`](consent_organization.html)|Reference|1..1|ODS code for the organization.|MUST be a URL|
-|[`source`](consent_source.html)|Reference|1..1|Capture mechanism used to set the patients preferences|
+|[`policy`](consent_policy.html)|uri|..1|Polict that the consent referes to|Should be able to resolve policy uri|
 |[`purpose`](consent_purpose.html)|Coding|1..1|Contains Opt-Out for Research or Commissioning & Planning|HRESCH, HOPERAT|
+
 
 ## Consent Extensions ##
 
@@ -36,6 +33,7 @@ National Data Opt-out Source of Opt-Out extension
 
 |Name|Data Type|Card|Description|
 |----|---------|----|-----------|
+|[`actor.actorperson`](consent_extension_actorperson.html)|extension|0..1|String value to capture person|Mother of patient|
 |[`OptoutSource`](consent_extension_sourceofoptout.html)|extension|1..1|Extension to capture the source that defined the national opt-out preferences e.g NHS Choice, GP System|
 
 
@@ -48,6 +46,9 @@ The example below demonstrates the structure of a constructed XML body that can 
 <script src="https://gist.github.com/dxh73/199ddd4005e1759effb23ee8ed902f9f.js"></script>
 
 {% include custom/post.consent.html base="https://fhir.nhs.uk/STU3/StructureDefinition/" resource="Consent" content1="POST" text1="https://nww.spine.nhs.uk/4505577104"%}
+
+{% include warning.html content="To prevent duplicate NDOP instances for a patient, implementers MUST perform a search prior to a create, to check for an existing instance, or use a conditional create for creating new instances."%}
+
 
 {% include custom/get.consent.html base="https://fhir.nhs.uk/STU3/StructureDefinition/" resource="Consent" content2="GET" id="133552f9-7aaf-485f-a91a-bdfc0a367409" nhsno="https://nww.spine.nhs.uk/4505577104" text2="NDOP" text3="HRESCH"%}
 

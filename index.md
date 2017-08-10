@@ -1,6 +1,6 @@
 ---
 title: Introduction to National Data Opt-out Programme
-keywords: noo, opt-out
+keywords: ndop, opt-out
 tags: [getting_started]
 sidebar: overview_sidebar
 permalink: index.html
@@ -26,7 +26,7 @@ The initial phase will provide an online portal which citizens can access via a 
 
 ## National Data Opt-out Programme API ##
 
-The National Data Opt-out Programme requires an API to capture the preferences chosen via the online portal and transfer these preferences to a centralized data store located on Spine. The API messaging will use the HL7 FHIR&reg; messaging standard to enable preferences to be created, retrieved and updated via it's own RESTful API. Due to the FHIR RESTful API using existing web technology (HTTP) to transfer messages, it allows rapid development of the NDOP API.
+The National Data Opt-out Programme requires an API to capture the preferences chosen via the online portal and transfer these preferences to a centralized data store located on Spine. The API messaging will use the HL7 FHIR&reg; messaging standard to enable preferences to be created, retrieved and updated via it's own RESTful API. FHIR RESTful API performs transactions using HTTP request/response, allowing rapid development of applications using the NDOP API.
 
 The NDOP API is relatively lightweight in its design, made up of limited limited components, making it easy to maintain and deploy.
 

@@ -4,10 +4,10 @@
 	<meta>
 		<profile value="https://fhir.nhs.uk/StructureDefinition/noom-consent-1"/>
 	</meta>
-	<status value="inactive"/>
+	<status value="active"/>
 	<category>
 		<coding>
-			<system value="https://fhir.nhs.uk/ValueSet/noom-category-type-1"/>
+			<system value="https://fhir.nhs.uk/ndop-categories-1"/>
 			<code value="NDOP"/>
 		</coding>
 	</category>
@@ -15,9 +15,6 @@
     	<reference value="https://nww.spine.nhs.uk/4505577104"/> 
     </patient>
     <dateTime value="2017-02-01T11:15:33+00:00"/>
-    <consentingParty>
-    	<reference value="https://nww.spine.nhs.uk/4505577104"/>
-    </consentingParty>
     <actor>
         <role>
             <coding>
@@ -29,10 +26,9 @@
             <reference value="https://nww.spine.nhs.uk/4505577104"/>
         </reference>
     </actor>
-    <policyRule value="http://hl7.org/fhir/ConsentPolicy/opt-out"/>
     <purpose> 
-        <system value="http://hl7.org/fhir/v3/ActReason"/> 
-        <code value="HOPERAT"/>
+        <system value="https://fhir.nhs.uk/ndop-preferences-codes-1"/> 
+        <code value="PLAN"/>
         <display value="healthcare operations"/>
     </purpose>
 </Consent>

@@ -9,7 +9,7 @@ summary: "low level details for the National Data Opt-out 'organization' element
 
 ### Element Usage ###
 
-National Data Opt-out uses consent.organization to capture the custodian organization that manages the consent. This will be fixed to NHS Digital.
+National Data Opt-out uses consent.organization to capture the custodian organization that manages the consent. This will be a fixed value of NHS Digital.
 
 ### organization ###
 
@@ -26,7 +26,7 @@ Example of correct usage
 Examples of incorrect usage
 
 |Usage| Element| examples| Comments|
-|![Cross](images/cross.png)|`organization`|NHS Choices |https://proxy.sds.nhs.uk/E123123|Custodian **MUST NOT** be a GP practice code|
+|![Cross](images/cross.png)|`organization`|NHS Choices |https://proxy.sds.nhs.uk/E123123|Custodian cannot be a GP practice code|
 
 
 On the wire XML example

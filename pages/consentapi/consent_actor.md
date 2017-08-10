@@ -11,26 +11,27 @@ summary: "low level details for the National Data Opt-out 'actor' element"
 
 actor uses the Consent.actor element to capture the patient or a healthcare professional who controls the consent. The value set will depend on how the consent was set e.g via NHS Choice or via GP Practice. 
 
-### status ###
+### actor ###
 
 |name|Data Type|Description|
 | ------------- | ------------- | ------------- |
 |actor| Reference | Backbone (parent) element to capture details about how consent is controlled.|
 |role| CodeableConcept | The role the actor plays|
-|reference| Reference | Resource that relates to the actor.|
+|reference| string | Resource that relates to the actor.|
+|ActorPerson| Extension | Text string to capture a person e.g Mother, Son, Daughter, Carer, etc.|
 
 Example of correct usage
 
 |Usage| Element| examples| Comments|
 |![Tick](images/tick.png)|`role`| INF |Valid code taken from http://hl7.org/fhir/ValueSet/security-role-type|
-|![Tick](images/tick.png)|`reference`| https://proxy.sds.nhs.uk/G1231231 |
-|![Tick](images/tick.png)|`reference`| https://proxy.pds.nhs.uk/4505577104 |
+|![Tick](images/tick.png)|`reference`| https://sds.nhs.uk/G1231231 |
+|![Tick](images/tick.png)|`reference`| https://pds.nhs.uk/4505577104 |
 
 Examples of incorrect usage
 
 |Usage| Element| examples| Comments|
 |![Cross](images/cross.png)|`role`| GP| invalid code, not supported by NDOP.|
-|![Cross](images/cross.png)|`reference`| G1231231 | Valid national code, but not url to locate it.
+|![Cross](images/cross.png)|`reference`| G1231231 | Valid national code, but no url to locate it.
 
 
 XML example
