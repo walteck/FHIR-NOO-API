@@ -18,6 +18,12 @@
 	<compose>
 		<include>
 			<system value="https://fhir.nhs.uk/ndop-preferences-codes-1"/>
+			<concept>
+				<code value="RESCH"/>
+			</concept>
+			<concept>
+				<code value="PLAN"/>
+			</concept>
 		</include>
 	</compose>
 </ValueSet>

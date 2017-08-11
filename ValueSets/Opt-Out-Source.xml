@@ -18,6 +18,24 @@
 	<compose>
 		<include>
 			<system value="https://fhir.nhs.uk/opt-out-source-codesystem-1"/>
+			<concept>
+		<code value="OP"/>
+	</concept>
+	<concept>
+		<code value="GP"/>
+	</concept>
+	<concept>
+		<code value="PFSP"/>
+	</concept>
+	<concept>
+		<code value="FN"/>
+	</concept>
+	<concept>
+		<code value="CC"/>
+	</concept>
+	<concept>
+		<code value="PP"/>
+	</concept>
 		</include>
 	</compose>
 </ValueSet>

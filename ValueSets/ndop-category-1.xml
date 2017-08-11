@@ -18,6 +18,12 @@
 	<compose>
 		<include>
 			<system value="https://fhir.nhs.uk/ndop-categories-1"/>
+			<concept>
+					<code value="NDOP"/>
+			</concept>
+			<concept>
+					<code value="T2"/>
+			</concept>
 		</include>
 	</compose>
 </ValueSet>
