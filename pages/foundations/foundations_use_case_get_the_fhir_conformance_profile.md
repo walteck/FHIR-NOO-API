@@ -31,8 +31,9 @@ Client SHALL include the following additional HTTP request headers:
 | `TraceID`        | Consumer's TraceID (i.e. GUID/UUID) |
 | `From`           | Consumer's ASID |
 | `To`             | Provider's ASID |
-| `InteractionID`  | `urn:nhs:names:services:TODO:fhir:rest:read:metadata`|
-| `Authorization`      | This will carry the base64 encoded JSON web token required for audit - see [Cross Organisation Audit and Provenance](integration_cross_organisation_audit_and_provenance.html) for details. |
+| `InteractionID`  | `urn:nhs:names:services:nationaldataoptout:fhir:rest:read:metadata`|
+| `Authorization`      | This will carry the base64 encoded JSON web token required for audit - see [Cross Organisation Audit and Provenance](https://nhsconnect.github.io/FHIR-NOO-API/development_security_jwt.html) for details. |
+| `If-None-Exists` | This will check for an existing instance before making creating a new one |
 
 #### Payload Request Body ####
 
