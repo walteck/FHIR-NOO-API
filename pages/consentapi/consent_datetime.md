@@ -38,8 +38,7 @@ On the wire example in JSON
 
 ```json
 {
-    "dateTime": { "-value": "2016-01-02T08:39:16+00:00" }
-  }
+"dateTime": "2016-01-02T08:39:16+00:00"
 }
 ```
 

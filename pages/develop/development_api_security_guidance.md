@@ -9,13 +9,7 @@ summary: "Details of the API security model and supported protocols."
 
 ## Transport Layer Security (TLS) Protocol ##
 
-After consultation with the Infrastructure Security, Operational Security and Spine DDC teams the following SSL protocols SHALL be supported.
-
-{% include important.html content="The list of supported ciphers is ordered in order of preference (i.e. the first item being the most preferred)." %}
-
-- `TLSv1.2`
-- `TLSv1.1`
-- `TLSv1`
+After consultation with the Infrastructure Security, Operational Security and Spine DDC teams `TLSv1.2` SSL protocol SHALL be supported.
 
 ## Supported Ciphers ##
 

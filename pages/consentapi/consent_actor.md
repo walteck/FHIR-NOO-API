@@ -45,7 +45,7 @@ XML example
     </coding>
   </role>
   <reference>
-    <reference value="https://nww.spine.nhs.uk/4505577104"/>
+    <reference value="https://pds.nhs.uk/4505577104"/>
   </reference>
 </actor>
 ```
@@ -54,17 +54,28 @@ JSON example
 
 ```json
 {
-  "actor": {
-    "role": {
-      "coding": {
-        "system": { "-value": "http://hl7.org/fhir/v3/ParticipationType" },
-        "code": { "-value": "INF" }
+  "actor": [
+	{
+
+    "role": [
+		{
+      "coding": [
+		{
+        "system": "http://hl7.org/fhir/v3/ParticipationType",
+        "code": "INF"
+        }
+    ]
+   }
+  ],
+    "reference": [
+		{
+         "reference": "https://pds.nhs.uk/4505577104"
+		}
+	   ]
       }
-    },
-    "reference": {
-      "reference": { "-value": "https://proxy.sds.nhs.uk/G1231231" }
-    }
-  }
+    ]
+   }
+  ]
 }
 ```
 

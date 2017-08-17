@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Consent xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../Schemas/consent.xsd">
-	<id value="783ffeef-538e-4a17-bed2-983a382ccdd7"/>
 	<meta>
 		<profile value="https://fhir.nhs.uk/StructureDefinition/noom-consent-1"/>
 	</meta>
@@ -21,7 +20,7 @@
 		</coding>
 	</category>
     <patient>
-    	<reference value="https://nww.pds.nhs.uk/4505577104"/> 
+    	<reference value="https://pds.nhs.uk/4505577104"/> 
     </patient>
     <dateTime value="2017-02-01T11:15:33+00:00"/>
     <actor>

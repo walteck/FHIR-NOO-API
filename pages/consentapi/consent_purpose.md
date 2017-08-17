@@ -43,11 +43,13 @@ JSON example
 
 ```json
 {
-  "purpose": {
-    "system": { "-value": "https://fhir.nhs.uk/ndop-preference-codes-1" },
-    "code": { "-value": "RESCH" },
-    "display": { "-value": "healthcare research" }
+  "purpose": [
+	{
+    "system": "https://fhir.nhs.uk/ndop-preference-codes-1",
+    "code": "RESCH",
+    "display": "healthcare research"
   }
+ ]
 }
 ```
 *Error Handling*

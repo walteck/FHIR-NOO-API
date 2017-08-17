@@ -43,9 +43,11 @@ JSON example
 
 ```json
 {
-  "organization": {
-    "reference": { "-value": "https://proxy.sds.nhs.uk/X26" }
+  "organization": [
+	{
+      "reference": "https://proxy.sds.nhs.uk/X26"
   }
+ ]
 }
 ```
 

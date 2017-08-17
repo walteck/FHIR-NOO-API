@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-10T15:46:48.561+01:00" />
+    <lastUpdated value="2017-08-17T10:25:56.087+01:00" />
     <tag>
       <code value="1" />
     </tag>
@@ -9,9 +9,9 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cbcc" />
   </extension>
-  <url value="https://fhir.nhs.uk/STU3/StructureDefinition/NDOP-Consent-1.xml" />
+  <url value="https://fhir.nhs.uk/STU3/StructureDefinition/NDOP-Consent-1" />
   <version value="1.0.0" />
-  <name value="NDOP-Consent-1.xml" />
+  <name value="NDOP-Consent-1" />
   <title value="NDOP-Consent-1.xml" />
   <status value="draft" />
   <date value="2017-06-06T16:38:15.6604672+01:00" />
@@ -1308,9 +1308,7 @@
         </extension>
         <strength value="required" />
         <description value="A classification of the type of consents found in a consent statement" />
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/consent-category" />
-        </valueSetReference>
+        <valueSetUri value="https://fhir.nhs.uk/ValueSet/noom-category-1" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -9514,6 +9512,7 @@
           <valueString value="ConsentCategory" />
         </extension>
         <strength value="required" />
+        <valueSetUri value="https://fhir.nhs.uk/ValueSet/noom-category-1" />
       </binding>
     </element>
     <element id="Consent.category.coding">
@@ -9729,16 +9728,16 @@
       <min value="1" />
       <max value="1" />
     </element>
-    <element>
+    <element id="Consent.organization.reference">
       <path value="Consent.organization.reference" />
       <min value="1" />
       <fixedString value="https://proxy.sds.nhs.uk/X26" />
     </element>
-    <element>
+    <element id="Consent.organization.identifier">
       <path value="Consent.organization.identifier" />
       <max value="0" />
     </element>
-    <element>
+    <element id="Consent.organization.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>

@@ -44,10 +44,12 @@ On the wire example in JSON
 ```json
 {
   "action": {
-    "coding": {
-      "system": { "-value": "http://hl7.org/fhir/ValueSet/consent-action" },
-      "code": { "-value": "disclose" }
+    "coding": [
+		{
+      "system": "http://hl7.org/fhir/ValueSet/consent-action",
+      "code": "disclose"
     }
+   ]
   }
 }
 ```

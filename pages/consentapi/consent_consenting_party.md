@@ -38,9 +38,11 @@ JSON example
 
 ```json
 {
-  "consentingParty": {
-    "reference": { "-value": "https://proxy.pds.nhs.uk/4505577104" }
+  "consentingParty": [
+	{
+     "reference": "https://proxy.pds.nhs.uk/4505577104"
   }
+ ]
 }
 ```
 

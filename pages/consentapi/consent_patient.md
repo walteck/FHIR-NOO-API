@@ -27,6 +27,22 @@ Examples of incorrect usage
 |![Cross](images/cross.png)|`patient`| 450-557-7104|Incorrect format. Missing url and has Hyphens between digits|
 |![Cross](images/cross.png)|`patient`| 4505577104|Incorrect format. Missing url.|
 
+XML Example
+
+```xml
+    <patient>
+    	<reference value="https://pds.nhs.uk/4505577104"/> 
+    </patient>
+```
+
+```json
+{
+  "patient": [
+	{
+	  "reference" : "https://pds.nhs.uk/4505577104""
+	}
+   ]
+}
 
 *Error Handling*
 

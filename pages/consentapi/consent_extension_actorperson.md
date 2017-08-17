@@ -41,10 +41,12 @@ On the wire example in JSON
 
 ```json
 {
-  "extension": {
-    "-url": "https://fhir.nhs.uk/STU3/StructureDefinition/extension-actorperson-1",
-    "valueString": { "-value": "Parent of child" }
-  }
+  "extension": [
+	{
+    "url": "https://fhir.nhs.uk/STU3/StructureDefinition/extension-actorperson-1",
+    "valueString": "Parent of child"
+	}
+  ]
 }
 ```
 

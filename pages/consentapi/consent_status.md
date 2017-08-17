@@ -47,7 +47,7 @@ JSON Body
 
 ```json
 {
-    "status": { "-value": "active" }
+ "status": "active"
 }
 ```
 

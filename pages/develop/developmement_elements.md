@@ -43,7 +43,7 @@ National Data Opt-out Source of Opt-Out extension
 
 The example below demonstrates the structure of a constructed XML body that can be submitted to the National Data Opt-out service via a HTTP POST. This will set the preferences for HRESCH only.
 
-<script src="https://gist.github.com/dxh73/199ddd4005e1759effb23ee8ed902f9f.js"></script>
+<script src="https://gist.github.com/IOPS-DEV/49fa92287f5b1f05cf451a2f2466a77f.js"></script>
 
 {% include custom/post.consent.html base="https://fhir.nhs.uk/STU3/StructureDefinition/" resource="Consent" content1="POST" text1="https://nww.spine.nhs.uk/4505577104"%}
 

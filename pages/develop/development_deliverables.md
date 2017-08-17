@@ -13,23 +13,23 @@ summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of Nation
 
 |Profile| 
 |-------|
-| [NDOP-Consent-1](https://fhir.nhs.uk/STU3/StructureDefinition/NDOP-Consent-1.xml) | 
+| [NDOP-Consent-1](https://simplifier.net/NOOM/Consent) | 
 
 # National Data Opt-out Extensions
 
 |Extension|
 |---------|
-| [Extension-ActorPerson-1](https://fhir.nhs.uk/STU3/StructureDefinition/extension-actorperson-1)|
-| [Extension-Extension-Opt-out-Source-1](https://fhir.nhs.uk/STU3/StructureDefinition/extension-optoutsource-1)|
+| [Extension-ActorPerson-1](https://simplifier.net/NOOM/extension-actorperson-1)|
+| [Extension-Extension-Opt-out-Source-1](https://simplifier.net/NOOM/extension-optoutsource-1)|
 
 
 # National Data Opt-out Valesets
 
 |Valeset|Description|
 |-------|-----------|
-|[ndop-category-1](https://fhir.nhs.uk/ValueSet/ndop-category-1)|
-|[ndop-preferences-1](https://fhir.nhs.uk/ValueSet/ndop-preferences-1)|
-|[Opt-Out-Source](https://fhir.nhs.uk/ValueSet/opt-out-source-1)|
+|[ndop-category-1](https://simplifier.net/NOOM/category-1)|
+|[ndop-preferences-1](https://simplifier.net/NOOM/preferences-1)|
+|[Opt-Out-Source](https://simplifier.net/NOOM/opt-out-source-1)|
 
 # Identifiers #
 

@@ -44,11 +44,13 @@ JSON Example
 ```json
 {
   "category": {
-    "coding": {
-      "system": { "-value": "https://fhir.nhs.uk/ValueSet/noom-category-type-1" },
-      "code": { "-value": "NDOP" }
+    "coding": [
+	  {
+        "system": "https://fhir.nhs.uk/ValueSet/noom-category-type-1",
+        "code": "NDOP" 
     }
-  }
+  ]
+ }
 }
 ```
 

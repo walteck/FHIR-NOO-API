@@ -59,8 +59,19 @@ On the wire example in JSON
 
 ```json
 {
-  "birthDate": { "-value": "1957-01-01" }
+  extension: [
+	"valuecodeableconcept" : {
+	"coding": [
+	  {
+		"system": "https://fhir.nhs.uk/opt-out-source-codesystem-1",
+		"code": "OP",
+		"display": "Online process"
+	  }
+   ]
+  }
+ ]
 }
+
 ```
 
 *Error Handling*
