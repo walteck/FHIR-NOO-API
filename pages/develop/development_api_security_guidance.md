@@ -32,7 +32,7 @@ After consultation with the Infrastructure Security, Operational Security and Sp
 
 - SSLCipherSuite = `AESGCM+EECDH,AESGCM+EDH,AES256+EECDH,AES256+EDH`
 - SSLHonorCipherOrder = `true`
-- SSLProtocol = `TLSv1+TLSv1.1+TLSv1.2`
+- SSLProtocol = `TLSv1.2`
 - SSLVerifyClient = `require`
 
 Please see the [Tomcat Config HTTP SSL Support](https://tomcat.apache.org/tomcat-8.0-doc/config/http.html#SSL_Support) webpage for more details.
