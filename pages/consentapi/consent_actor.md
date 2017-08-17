@@ -54,25 +54,26 @@ JSON example
 
 ```json
 {
-  "actor": [
-	{
-    "role": [
-		{
-      "coding": [
-		{
-        "system": "http://hl7.org/fhir/v3/ParticipationType",
-        "code": "INF"
-        }
-    ]
-   }
-  ],
-    "reference": [
-		{
-         "reference": "https://pds.nhs.uk/4505577104"
-		}
-	   ]
+"actor": [
+    {
+      "role": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v3/ParticipationType",
+            "code": "INF"
+          }
+        ]
+      },
+      "reference": {
+        "reference": "https:/pds.nhs.uk/4505577104"
       }
-    ]
+    }
+  ],
+  "organization": [
+    {
+      "reference": "https:/sds.nhs.uk/X26"
+    }
+  ]
 }
 ```
 
