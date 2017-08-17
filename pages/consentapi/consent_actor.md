@@ -56,7 +56,6 @@ JSON example
 {
   "actor": [
 	{
-
     "role": [
 		{
       "coding": [
@@ -74,8 +73,6 @@ JSON example
 	   ]
       }
     ]
-   }
-  ]
 }
 ```
 
