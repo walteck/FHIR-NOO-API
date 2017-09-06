@@ -36,9 +36,9 @@ summary: "Developer Cheat Sheet shortcuts for the <br/>technical build of Nation
 | identifier | URI | Comment |
 |--------------------------------------------|----------|----|
 | `Logical ID` | https://fhir.nhs.uk/Consent/[id] | Consent record identifier |
-| `Patient` | https://pds.nhs.uk | Patient |
-|`actor`|https://sds.nhs.uk or https://proxy.pds.nhs.uk | Patient or Practitioner|
-|`organization`|https://sds.nhs.uk |NHS Digital (X26)|
+| `Patient` | https://demographics.spineservices.nhs.uk | Patient |
+|`actor`|https://clinicals.spineservices.nhs.uk or https://demographics.spineservices.nhs.uk | Patient or Practitioner|
+|`organization`|https://clincals.spineservices.nhs.uk |NHS Digital (X26)|
 
 
-{% include warning.html content="The URI's for PDS and SDS are not confirmed and are subject to change." %}
+{% include warning.html content="The URI's on subdomain spineservices.nhs.uk are currently not resolvable, however this will change in the future where references relate to FHIR endpoints in our national systems." %}

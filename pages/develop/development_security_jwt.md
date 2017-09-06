@@ -25,7 +25,7 @@ Consumer system SHALL generate a new JWT for each API request.
 | reason_for_request | R | Purpose for which access is being requested | `optoutprefs` | No | |
 | requested_record | R | The FHIR consent resource being requested (i.e. NHS Number identifier details) | No | FHIR Consent | Consent-1[Rendered](https://fhir.nhs.uk/STU3/structuredfintion/consent-1.html)[json]() [Example]() |
 | requested_scopes | R | Data being requested | consent.read | No | |
-| requesting_actor | R | Reference to the person who is making the request | No | Reference | https://sds.nhs.uk/E12345 | |
+| requesting_actor | R | Reference to the person who is making the request | No | Reference | https://clinicals.spineservices.nhs.uk/E12345 | |
 
 
 #### JWT Generation ####
@@ -69,7 +69,7 @@ eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJpc3MiOiJodHRwOi8vZWMyLTU0LTE5NC0xMDktMTg0
 	"requested_record": {
 		"resourceType": "Consent",
 		"patient": [{
-			"reference": "https://pds.nhs.uk/[nhs-number]"
+			"reference": "https://demographics.spineservices.nhs.uk/[nhs-number]"
 		}]
 	},
 	"requested_scopes": "consent/*.read",

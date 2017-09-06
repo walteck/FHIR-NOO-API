@@ -21,12 +21,12 @@ National Data Opt-out uses consent.organization to capture the custodian organiz
 Example of correct usage
 
 |Usage| Element| examples| Comments|
-|![Tick](images/tick.png)|`organization`|https://proxy.sds.nhs.uk/X26|Organization should have a fixed value of 'X26' which is the ODS code for NHS Digital|
+|![Tick](images/tick.png)|`organization`|https://clinicals.spineservices.nhs.uk/X26|Organization should have a fixed value of 'X26' which is the ODS code for NHS Digital|
 
 Examples of incorrect usage
 
 |Usage| Element| examples| Comments|
-|![Cross](images/cross.png)|`organization`|NHS Choices |https://proxy.sds.nhs.uk/E123123|Custodian cannot be a GP practice code|
+|![Cross](images/cross.png)|`organization`|NHS Choices |https://demographics.spineservices.nhs.uk/E123123|Custodian cannot be a GP practice code|
 
 
 On the wire XML example
@@ -35,7 +35,7 @@ XML example
 
 ```xml
     <organization>
-    	<reference value="https://proxy.sds.nhs.uk/X26"/>
+    	<reference value="https://demographics.spineservices.nhs.uk/X26"/>
     </organization>
 ```
 
@@ -45,7 +45,7 @@ JSON example
 {
   "organization": [
 	{
-      "reference": "https://proxy.sds.nhs.uk/X26"
+      "reference": "https://clinicals.spineservices.nhs.uk/X26"
   }
  ]
 }
