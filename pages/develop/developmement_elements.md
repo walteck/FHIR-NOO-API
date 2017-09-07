@@ -20,8 +20,8 @@ summary: "Implentation guide on the characteristics and usage of the profiles el
 |`actor.role`|CodeableConcept|1..1|Valueset for the role|INF=informant|
 |`actor.reference`|Reference|1..1|URL for the actor|
 |[`organization`](consent_organization.html)|Reference|1..1|ODS code for the organization.|MUST be a URL|
-|[`policy`](consent_policy.html)|uri|..1|Polict that the consent referes to|Should be able to resolve policy uri|
-|[`purpose`](consent_purpose.html)|Coding|1..1|Contains Opt-Out for Research or Commissioning & Planning|HRESCH, HOPERAT|
+|[`policy`](consent_policy.html)|uri|..1|Policy that the consent refers to|Should be able to resolve policy uri|
+|[`purpose`](consent_purpose.html)|Coding|1..1|Contains Opt-Out for Research or Commissioning & Planning|RESCH, PLAN|
 
 
 ## Consent Extensions ##
