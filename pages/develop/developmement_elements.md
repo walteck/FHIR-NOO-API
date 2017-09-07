@@ -52,7 +52,7 @@ The example below demonstrates the structure of a constructed XML body that can 
 
 {% include custom/get.consent.html base="https://fhir.nhs.uk/STU3/" resource="Consent" content2="GET" id="133552f9-7aaf-485f-a91a-bdfc0a367409" nhsno="https://nww.spine.nhs.uk/4505577104" text2="NDOP" text3="HRESCH"%}
 
-{% include custom/put.consent.html base="https://fhir.nhs.uk/" resource="Consent" content2="PUT" id="133552f9-7aaf-485f-a91a-bdfc0a367409"%}
+{% include custom/put.consent.html base="https://fhir.nhs.uk/STU3/" resource="Consent" content2="PUT" id="133552f9-7aaf-485f-a91a-bdfc0a367409"%}
 
 ## Searching National Data Opt-out History ##
 
