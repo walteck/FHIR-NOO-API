@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-08T09:54:14.255+01:00" />
+    <lastUpdated value="2017-09-08T10:01:31.951+01:00" />
     <tag>
       <code value="1" />
     </tag>
@@ -5427,7 +5427,7 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="PurposeOfUse" />
         </extension>
-        <strength value="extensible" />
+        <strength value="required" />
         <description value="What purposes of use are controlled by this exception. If more than one label is specified, operations must have all the specified labels" />
         <valueSetUri value="https://fhir.nhs.uk/STU3/ndop-preference-codes-1" />
       </binding>
@@ -10572,7 +10572,7 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="PurposeOfUse" />
         </extension>
-        <strength value="extensible" />
+        <strength value="required" />
         <valueSetUri value="https://fhir.nhs.uk/STU3/ndop-preference-codes-1" />
       </binding>
     </element>
