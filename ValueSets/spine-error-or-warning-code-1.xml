@@ -2,7 +2,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
 	<url value="https://fhir.nhs.uk/STU3/ValueSet/spine-error-or-warning-code-1"/>
 	<version value="1.0.0"/>
-	<name value="Spine Errors and Warinings"/>
+	<name value="Spine Errors and Warnings"/>
 	<status value="draft"/>
 	<date value="2017-06-27"/>
 	<publisher value="NHS Digital"/>
