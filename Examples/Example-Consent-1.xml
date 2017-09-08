@@ -2,7 +2,7 @@
 <Consent xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../Schemas/consent.xsd">
 <id value="783ffeef-538e-4a17-bed2-983a382ccdd7"/>
 <meta>
-<profile value="https://fhir.nhs.uk/STU3/StructureDefinition/noom-consent-1"/>
+<profile value="https://fhir.nhs.uk/STU3/StructureDefinition/NDOP-Consent-1.xml"/>
 </meta>
 <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-SourceOfOptOut-1">
 	<valueCodeableConcept>
