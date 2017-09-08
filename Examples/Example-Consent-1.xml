@@ -2,12 +2,12 @@
 <Consent xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../Schemas/consent.xsd">
 <id value="783ffeef-538e-4a17-bed2-983a382ccdd7"/>
 <meta>
-<profile value="https://fhir.nhs.uk/3.0.1/StructureDefinition/noom-consent-1"/>
+<profile value="https://fhir.nhs.uk/STU3/StructureDefinition/noom-consent-1"/>
 </meta>
-<extension url="https://fhir.nhs.uk/StructureDefinition/Extension-SourceOfOptOut-1">
+<extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-SourceOfOptOut-1">
 	<valueCodeableConcept>
 		<coding>
-			<system value="https://fhir.nhs.uk/opt-out-source-1"/>
+			<system value="https://fhir.nhs.uk/STU3/CodeSystem/opt-out-source-codesystem-1"/>
 			<code value="OP"/>
 			<display value="Online Process"/>
 		</coding>
@@ -16,8 +16,8 @@
 <status value="active"/>
 <category>
 	<coding>
-	<system value="https://fhir.nhs.uk/ValueSet/noom-category-type-1"/>
-		<code value="NOOM"/>
+	<system value="https://fhir.nhs.uk/STU3/CodeSystem/ndop-categories-1"/>
+		<code value="NDOP"/>
 	</coding>
 </category>
 <patient>
@@ -42,8 +42,8 @@
 	<reference value="https://sds.proxy.nhs.uk/4505577104"/>
 </organization>
 <purpose>
-			<system value="https://fhir.nhs.uk/noom-preference-codes-1"/>
+			<system value="https://fhir.nhs.uk/STU3/CodeSystem/ndop-preference-codes-1"/>
 			<code value="PC"/>
-			<display value="Planning and Commissioning"/>
+			<display value="Opted out of Planning and Commisioning Data Sharing"/>
 </purpose>
 </Consent>

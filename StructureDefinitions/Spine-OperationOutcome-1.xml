@@ -673,7 +673,7 @@
         <strength value="required" />
         <description value="A coded expression of the type of issue" />
         <valueSetReference>
-          <reference value="https://fhir.nhs.uk/ValueSet/spine-error-or-warning-code-1" />
+          <reference value="https://fhir.nhs.uk/STU3/ValueSet/spine-error-or-warning-code-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -927,7 +927,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.nhs.uk/spine-error-or-warning-code-1" />
+      <fixedUri value="https://fhir.nhs.uk/STU3/CodeSystem/spine-response-codes-1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1295,7 +1295,7 @@
         <strength value="required" />
         <description value="A coded expression of the type of issue" />
         <valueSetReference>
-          <reference value="https://fhir.nhs.uk/ValueSet/spine-error-or-warning-code-1" />
+          <reference value="https://fhir.nhs.uk/STU3/ValueSet/spine-error-or-warning-code-1" />
         </valueSetReference>
       </binding>
     </element>
@@ -1307,7 +1307,7 @@
     <element id="OperationOutcome.issue.details.coding.system">
       <path value="OperationOutcome.issue.details.coding.system" />
       <min value="1" />
-      <fixedUri value="https://fhir.nhs.uk/spine-error-or-warning-code-1" />
+      <fixedUri value="https://fhir.nhs.uk/STU3/CodeSystem/spine-response-codes-1" />
     </element>
     <element id="OperationOutcome.issue.details.coding.version">
       <path value="OperationOutcome.issue.details.coding.version" />

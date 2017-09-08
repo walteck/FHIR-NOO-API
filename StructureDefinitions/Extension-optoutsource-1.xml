@@ -314,7 +314,7 @@
       <binding>
         <strength value="required" />
         <description value="Opt-out source" />
-        <valueSetUri value="https://fhir.nhs.uk/opt-out-source-1" />
+        <valueSetUri value="https://fhir.nhs.uk/STU3/ValueSet/opt-out-source-1" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -439,7 +439,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.nhs.uk/opt-out-source-1" />
+      <fixedUri value="https://fhir.nhs.uk/STU3/CodeSystem/opt-out-source-codesystem-1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -707,13 +707,13 @@
       <binding>
         <strength value="required" />
         <description value="Opt-out source" />
-        <valueSetUri value="https://fhir.nhs.uk/opt-out-source-1" />
+        <valueSetUri value="https://fhir.nhs.uk/STU3/ValueSet/opt-out-source-1" />
       </binding>
     </element>
     <element>
       <path value="Extension.valueCodeableConcept.coding.system" />
       <min value="1" />
-      <fixedUri value="https://fhir.nhs.uk/opt-out-source-1" />
+      <fixedUri value="https://fhir.nhs.uk/STU3/CodeSystem/opt-out-source-codesystem-1" />
     </element>
     <element>
       <path value="Extension.valueCodeableConcept.coding.version" />

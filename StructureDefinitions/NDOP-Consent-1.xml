@@ -2047,7 +2047,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.nhs.uk/ndop-categories-1" />
+      <fixedUri value="https://fhir.nhs.uk/STU3/CodeSystem/ndop-categories-1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2061,7 +2061,7 @@
         <strength value="required" />
         <description value="National Data Opt-out Programme Category CodeSystem" />
         <valueSetReference>
-          <reference value="https://fhir.nhs.uk/ndop-categories-1" />
+          <reference value="https://fhir.nhs.uk/STU3/ValueSet/ndop-category-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -5441,7 +5441,7 @@
         </extension>
         <strength value="required" />
         <description value="What purposes of use are controlled by this exception. If more than one label is specified, operations must have all the specified labels" />
-        <valueSetUri value="https://fhir.nhs.uk/valueset/ndop-preferences-1" />
+        <valueSetUri value="https://fhir.nhs.uk/STU3/ValueSet/ndop-preferences-1" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -5554,7 +5554,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.nhs.uk/ndop-preference-codes-1" />
+      <fixedUri value="https://fhir.nhs.uk/STU3/CodeSystem/ndop-preference-codes-1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -5567,7 +5567,7 @@
       <binding>
         <strength value="required" />
         <description value="Supports communication of purpose of use at a general level." />
-        <valueSetUri value="https://fhir.nhs.uk/ndop-preference-codes-1" />
+        <valueSetUri value="https://fhir.nhs.uk/STU3/ValueSet/ndop-preferences-1" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -10313,12 +10313,12 @@
     <element id="Consent.category.coding.system">
       <path value="Consent.category.coding.system" />
       <min value="1" />
-      <fixedUri value="https://fhir.nhs.uk/ndop-categories-1" />
+      <fixedUri value="https://fhir.nhs.uk/STU3/CodeSystem/ndop-categories-1" />
       <binding>
         <strength value="required" />
         <description value="National Data Opt-out Programme Category CodeSystem" />
         <valueSetReference>
-          <reference value="https://fhir.nhs.uk/ndop-categories-1" />
+          <reference value="https://fhir.nhs.uk/STU3/ValueSet/ndop-category-1" />
         </valueSetReference>
       </binding>
     </element>
@@ -10612,17 +10612,17 @@
           <valueString value="PurposeOfUse" />
         </extension>
         <strength value="required" />
-        <valueSetUri value="https://fhir.nhs.uk/valueset/ndop-preferences-1" />
+        <valueSetUri value="https://fhir.nhs.uk/STU3/ValueSet/ndop-preferences-1" />
       </binding>
     </element>
     <element id="Consent.purpose.system">
       <path value="Consent.purpose.system" />
       <min value="1" />
-      <fixedUri value="https://fhir.nhs.uk/ndop-preference-codes-1" />
+      <fixedUri value="https://fhir.nhs.uk/STU3/CodeSystem/ndop-preference-codes-1" />
       <binding>
         <strength value="required" />
         <description value="Supports communication of purpose of use at a general level." />
-        <valueSetUri value="https://fhir.nhs.uk/ndop-preference-codes-1" />
+        <valueSetUri value="https://fhir.nhs.uk/STU3/ValueSet/ndop-preferences-1" />
       </binding>
     </element>
     <element id="Consent.purpose.version">
