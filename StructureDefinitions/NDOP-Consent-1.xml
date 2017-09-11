@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-03T11:02:39.272+01:00" />
+    <lastUpdated value="2017-09-08T10:01:31.951+01:00" />
     <tag>
       <code value="1" />
     </tag>
@@ -9,9 +9,9 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cbcc" />
   </extension>
-  <url value="https://fhir.nhs.uk/STU3/StructureDefinition/NDOP-Consent-1.xml" />
-  <version value="1.0.0" />
-  <name value="NDOP-Consent-1.xml" />
+  <url value="https://fhir.nhs.uk/STU3/StructureDefinition/NDOP-Consent-1" />
+  <version value="1.1.0" />
+  <name value="NDOP-Consent-1" />
   <title value="NDOP-Consent-1.xml" />
   <status value="draft" />
   <date value="2017-06-06T16:38:15.6604672+01:00" />
@@ -1791,9 +1791,7 @@
         </extension>
         <strength value="required" />
         <description value="A classification of the type of consents found in a consent statement" />
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/consent-category" />
-        </valueSetReference>
+        <valueSetUri value="https://fhir.nhs.uk/ValueSet/noom-category-1" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -2057,13 +2055,6 @@
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="National Data Opt-out Programme Category CodeSystem" />
-        <valueSetReference>
-          <reference value="https://fhir.nhs.uk/ndop-categories-1" />
-        </valueSetReference>
-      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -3366,7 +3357,7 @@
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="CodeableConcept.coding" />
@@ -3876,7 +3867,7 @@
       <short value="Literal reference, Relative, internal or absolute URL" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Reference.reference" />
@@ -3967,7 +3958,7 @@
       <definition value="Plain text narrative that identifies the resource in addition to the resource reference." />
       <comment value="This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Reference.display" />
         <min value="0" />
@@ -4538,7 +4529,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="https://proxy.sds.nhs.uk/organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -4662,10 +4653,7 @@
       <type>
         <code value="string" />
       </type>
-      <example>
-        <label value="Organization" />
-        <valueString value="https://proxy.sds.nhs.uk" />
-      </example>
+      <fixedString value="https://proxy.sds.nhs.uk/X26" />
       <condition value="ele-1" />
       <condition value="ref-1" />
       <constraint>
@@ -4833,8 +4821,8 @@
       <path value="Consent.policy" />
       <short value="Policies covered by this consent" />
       <definition value="The references to the policies that are included in this consent scope. Policies may be organizational, but are often defined jurisdictionally, or in law." />
-      <min value="0" />
-      <max value="0" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Consent.policy" />
         <min value="0" />
@@ -4983,8 +4971,8 @@
       <short value="Enforcement source for policy" />
       <definition value="Entity or Organization having regulatory jurisdiction or accountability for  enforcing policies pertaining to Consent Directives." />
       <comment value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
-      <min value="0" />
-      <max value="0" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Consent.policy.authority" />
         <min value="0" />
@@ -5012,8 +5000,8 @@
       <short value="Specific policy covered by this consent" />
       <definition value="The references to the policies that are included in this consent scope. Policies may be organizational, but are often defined jurisdictionally, or in law." />
       <comment value="This element is for discoverability / documentation, and does not modify or qualify the policy rules." />
-      <min value="0" />
-      <max value="0" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Consent.policy.uri" />
         <min value="0" />
@@ -5441,7 +5429,7 @@
         </extension>
         <strength value="required" />
         <description value="What purposes of use are controlled by this exception. If more than one label is specified, operations must have all the specified labels" />
-        <valueSetUri value="https://fhir.nhs.uk/valueset/ndop-preferences-1" />
+        <valueSetUri value="https://fhir.nhs.uk/STU3/ndop-preference-codes-1" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -5554,7 +5542,6 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.nhs.uk/ndop-preference-codes-1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -5564,11 +5551,6 @@
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="Supports communication of purpose of use at a general level." />
-        <valueSetUri value="https://fhir.nhs.uk/ndop-preference-codes-1" />
-      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -10302,6 +10284,7 @@
           <valueString value="ConsentCategory" />
         </extension>
         <strength value="required" />
+        <valueSetUri value="https://fhir.nhs.uk/ValueSet/noom-category-1" />
       </binding>
     </element>
     <element id="Consent.category.coding">
@@ -10314,13 +10297,6 @@
       <path value="Consent.category.coding.system" />
       <min value="1" />
       <fixedUri value="https://fhir.nhs.uk/ndop-categories-1" />
-      <binding>
-        <strength value="required" />
-        <description value="National Data Opt-out Programme Category CodeSystem" />
-        <valueSetReference>
-          <reference value="https://fhir.nhs.uk/ndop-categories-1" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="Consent.category.coding.version">
       <path value="Consent.category.coding.version" />
@@ -10424,9 +10400,7 @@
     <element id="Consent.actor.extension:ActorPerson">
       <path value="Consent.actor.extension" />
       <sliceName value="ActorPerson" />
-      <short value="Actor Person" />
       <definition value="Extension to capture an alternative person e.g. Parent." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -10435,7 +10409,6 @@
     </element>
     <element id="Consent.actor.role.coding">
       <path value="Consent.actor.role.coding" />
-      <min value="1" />
       <max value="1" />
     </element>
     <element id="Consent.actor.role.coding.system">
@@ -10470,6 +10443,7 @@
     </element>
     <element id="Consent.actor.reference.reference">
       <path value="Consent.actor.reference.reference" />
+      <min value="1" />
       <example>
         <label value="Practitioner" />
         <valueString value="https://proxy.sds.nhs.uk" />
@@ -10481,13 +10455,6 @@
     </element>
     <element id="Consent.actor.reference.identifier">
       <path value="Consent.actor.reference.identifier" />
-      <max value="0" />
-    </element>
-    <element id="Consent.actor.reference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Consent.actor.reference.display" />
       <max value="0" />
     </element>
     <element id="Consent.action">
@@ -10532,18 +10499,11 @@
       <path value="Consent.organization" />
       <min value="1" />
       <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://proxy.sds.nhs.uk/organization" />
-      </type>
     </element>
     <element id="Consent.organization.reference">
       <path value="Consent.organization.reference" />
       <min value="1" />
-      <example>
-        <label value="Organization" />
-        <valueString value="https://proxy.sds.nhs.uk" />
-      </example>
+      <fixedString value="https://proxy.sds.nhs.uk/X26" />
     </element>
     <element id="Consent.organization.identifier">
       <path value="Consent.organization.identifier" />
@@ -10562,15 +10522,16 @@
     </element>
     <element id="Consent.policy">
       <path value="Consent.policy" />
-      <max value="0" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Consent.policy.authority">
       <path value="Consent.policy.authority" />
-      <max value="0" />
+      <min value="1" />
     </element>
     <element id="Consent.policy.uri">
       <path value="Consent.policy.uri" />
-      <max value="0" />
+      <min value="1" />
     </element>
     <element id="Consent.policyRule">
       <path value="Consent.policyRule" />
@@ -10612,18 +10573,12 @@
           <valueString value="PurposeOfUse" />
         </extension>
         <strength value="required" />
-        <valueSetUri value="https://fhir.nhs.uk/valueset/ndop-preferences-1" />
+        <valueSetUri value="https://fhir.nhs.uk/STU3/ndop-preference-codes-1" />
       </binding>
     </element>
     <element id="Consent.purpose.system">
       <path value="Consent.purpose.system" />
       <min value="1" />
-      <fixedUri value="https://fhir.nhs.uk/ndop-preference-codes-1" />
-      <binding>
-        <strength value="required" />
-        <description value="Supports communication of purpose of use at a general level." />
-        <valueSetUri value="https://fhir.nhs.uk/ndop-preference-codes-1" />
-      </binding>
     </element>
     <element id="Consent.purpose.version">
       <path value="Consent.purpose.version" />
