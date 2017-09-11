@@ -11,7 +11,7 @@ summary: A record of a healthcare consumer’s policy choices, which permits or 
 
 ## 1. Create ##
 
-New National Opt-Out records are captured using the FHIR `Consent` resource.
+New National Data Opt-out records are captured using the FHIR `Consent` resource.
 
 <div markdown="span" class="alert alert-success" role="alert">
 POST https://fhir.nhs.uk/structureDefinition/Consent</div>
@@ -28,7 +28,7 @@ Return a single `Consent` record for the specified logical ID (Not the NHS Numbe
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET /Consent/[searchParameters]</div>
-Consent contains the patients opt-out preferences for the National Opt-Out Programme. Returns a bundle or single `Consent` resource for the specified patient or search criteria.
+Consent contains the patients opt-out preferences for the National Data Opt-out Programme. Returns a bundle or single `Consent` resource for the specified patient or search criteria.
 
 {% include custom/moscow.html content="[Consent](https://www.hl7.org/fhir/consent.html#search)" %}
 
@@ -48,7 +48,7 @@ GET /Consent/_history/[searchParameters]</div>
 
 ## 3. Example ##
 
-Place a consent record onto the National Opt-Out register (Spine Clinical Database)
+Place a consent record onto the National Data Opt-out register (Spine Clinical Database)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

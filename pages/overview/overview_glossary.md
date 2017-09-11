@@ -19,8 +19,14 @@ Consumer
 Provider
 : {{site.data.glossary.provider}}
 
-Accreditation
-: {{site.data.glossary.accreditation}}
+Personal Demographics Service
+: {{site.data.glossary.PDS}}
 
-Assurance
-: {{site.data.glossary.assurance}}
+Spine Directory Service
+: {{site.data.glossary.SDS}}
+
+FHIR
+: {{site.data.glossary.FHIR}}
+
+REST
+: {{site.data.glossary.REST}}

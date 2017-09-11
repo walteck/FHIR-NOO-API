@@ -1,158 +1,69 @@
 entries:
-- title: National Opt-Out
-  product: National Opt-Out<br/>
-  version: 1.0.0-alpha.1
+- title: National Data Opt-out Programme
+  product: National Data Opt-out Programme<br/>
+  version: 1.2.0-beta.1
   levels: one
   folders:
-
   - title: Overview
     output: web
     folderitems:
-    - title: Introduction
+    - title: National Data Opt-out Programme API
       url: /index.html
       output: web, pdf
       type: homepage
-    - title: Development Roadmap
-      url: /design_development_roadmap.html
+    - title: About NDOP
+      url: /overview_ndop.html
       output: web
-    - title: Care Connect Versioning
+    - title: Semantic Versioning
       url: /design_product_versioning.html
+      output: web
+    - title: API History
+      url: /design_product_history.html
       output: web
     - title: Glossary
       url: /overview_glossary.html
       output: web
 
-  - title: Engage
+  - title: Resources
     output: web
     folderitems:
-    - title: Overview
-      url: /engage.html
-      output: web, pdf
-      type: homepage
-    - title: User Stories | FHIR&reg; 
-      url: /engage_user_stories.html
-      output: web
-      subfolders:
-    - title: Using Profiles
-      url: /engage_using_profiles.html
-      output: web
-      subfolders:
-    - title: Proof of Concepts
-      url: /engage_proof_of_concept.html
-      output: web
-      subfolders:
-    - title: Case Studies
-      url: /engage_case_studies.html
-      output: web
-      subfolders:
-  - title: Design & Build
-    output: web
-    folderitems:
-    - title: Overview | Profiles
-      url: /restfulapis.html
-      output: web
-    - title: RESTful Interactions
-      url: /development_interactions.html
-      output: web     
+    - title: Interface Overview
+      url: /development_overview.html
+      output: web    
       subfolders:         
-      - title: FHIR&reg; Profile | Consent
+      - title: Security & Privacy
         output: web
         subfolderitems:
-        - title: Elements & RESTful API
-          url: /development_elements.html
-          output: web
-        - title: Structure Definitions
-          url: /development_rendered_consent.html
-          output: web
-        - title: Profile Examples
-          url: /development_consent_examples.html
-          output: web       
-    - title: API Foundations
-      url: /foundations.html
-      output: web
-    - title: Reference
-      url: /development_deliverables.html
-      output: web
-    - title: FHIR&reg; capabilityStatement
-      url: /foundations_use_case_get_the_fhir_conformance_profile.html
-      output: web      
-      subfolders:
-      - title: API Guidance | FHIR&reg; 
-        output: web
-        subfolderitems:
-
-        - title: Open Source
-          url: /development_fhir_open_source_guidance.html
-          output: web
         - title: Security Guidance
           url: /development_api_security_guidance.html
           output: web
         - title: Cross Organnization Audit & Provenance using JWT
           url: /development_security_jwt.html
+          output: web   
+      
+      - title: Foundations
+        output: web
+        subfolderitems:
+        - title: Consent
+          url: /development_elements.html
           output: web
-          
-  - title: Explore
-    output: web
-    folderitems:
-    - title: Overview | Coming soon
-      url: /support_coming_soon.html
-      output: web
-      
-  - title: Test
-    output: web
-    folderitems:
-    - title: Overview
-      url: /test_overview.html
-      output: web
-    - title: Test Scenarios
-      url: /test_scenarios.html
-      output: web  
-    - title: Test Data
-      url: /test_data.html
-      output: web  
-    - title: User Acceptance Testing (UAT)
-      url: /test_uat.html
-      output: web  
-    - title: Security Testing
-      url: /test_security.html
-      output: web
-    - title: FHIR Server Tests
-      url: /test_fhir_server.html
-      output: web  
-      
-  - title: Accredit
-    output: web
-    folderitems:
-    - title: Overview | Coming soon
-      url: /support_coming_soon.html
-      output: web
-  - title: Deploy
-    output: web
-    folderitems:
-    - title: Overview | Coming soon
-      url: /support_coming_soon.html
-      output: web
-
-    - title: Deploy
-    output: web
-    folderitems:
-    - title: Pilot
-      url: /deploy_pilot.html
-      output: web
-    - title: Live
-      url: /deploy_live.html
-      output: web
-      
-  - title: Help & Support
-    output: web
-    folderitems:
-    - title: Frequently Asked Questions (FAQ)
-      url: /support_faq.html
-      output: web
-    - title: Communication Channels
-      url: /support_communications.html
-      output: web    
-      
+        - title: capabilityStatement
+          url: /foundations_use_case_get_the_fhir_conformance_profile.html
+          output: web
+           
+      - title: API Guidance | FHIR&reg; 
+        output: web
+        subfolderitems:
+        - title: RESTful Interactions
+          url: /development_interactions.html
+          output: web 
+        - title: Open Source
+          url: /development_fhir_open_source_guidance.html
+          output: web   
+    - title: Reference
+      url: /development_deliverables.html
+      output: web 
+        
   - title: Tags
     output: web
     folderitems:
@@ -171,3 +82,7 @@ entries:
     - title: Development
       url: /tag_development.html
       output: web      
+      
+      
+      
+      

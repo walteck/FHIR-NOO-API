@@ -1,32 +1,41 @@
 <h3 id="patient">{{include.content2}}</h3>
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET {{include.base}}{{include.resource}}?patient=[NHS Number]</div>
+GET {{include.base}}{{include.resource}}/[id]</div>
 
-<p>See <a href="https://www.hl7.org/fhir/searchparameter-registry.html">reference</a> for details on this parameter.</p>
+<div class="language-http highlighter-rouge">
+<pre class="highlight"><code><span class="err">GET {{include.base}}{{include.resource}}/133552f9-7aaf-485f-a91a-bdfc0a367409
+</span></code>
+Return {{include.resource}} resource that has a logical id of {{include.id}}.</pre>
+</div>
+
+<div markdown="span" class="alert alert-success" role="alert">
+GET {{include.base}}{{include.resource}}?patient=[reference]</div>
 
 <div class="language-http highlighter-rouge">
 <pre class="highlight"><code><span class="err">GET {{include.base}}{{include.resource}}?patient=https://nww.spine.nhs.uk/4505577104
 </span></code>
-Return {{include.resource}} resource that has a patient NHS number of {{include.text1}}.</pre>
+Return {{include.resource}} resource that has a patient reference of {{include.nhsno}}.</pre>
 </div>
 
-<p>Return all current patients consent instances that exist with the supplied patients NHS number and with a category of "NOOM" to indicate these are National Opt-Out records that exclude Type 2 objections.</p> 
+<p>Return all current patients consent instances that exist with the supplied patient reference and with a category of "NDOP" to indicate these are National Opt-Out records that exclude Type 2 objections.</p> 
 
 <div markdown="span" class="alert alert-success" role="alert">
 GET {{include.base}}{{include.resource}}?patient=[NHS Number]&category=[Category Type]</div>
 
 <div class="language-http highlighter-rouge">
-<pre class="highlight"><code><span class="err">GET {{include.base}}{{include.resource}}?patient=https://nww.spine.nhs.uk/4505577104&category=NOOM
+<pre class="highlight"><code><span class="err">GET {{include.base}}{{include.resource}}?patient=https://nww.spine.nhs.uk/4505577104&category=NDOP
 </span></code>
-Return {{include.resource}} resource that has a patient value of {{include.text1}} and a category of {{include.text2}}.</pre>
+Return {{include.resource}} resource that has a patient reference of {{include.nhsno}} and a category of {{include.text2}}.</pre>
 </div>
 
 <div markdown="span" class="alert alert-success" role="alert">
-GET {{include.base}}{{include.resource}}?patient=[NHS Number]&category=[Category Type]</div>
+GET {{include.base}}{{include.resource}}?patient=[reference]&category=[Category Type]&purpose=[opt-out]</div>
 
 <div class="language-http highlighter-rouge">
-<pre class="highlight"><code><span class="err">GET {{include.base}}{{include.resource}}?https://nww.spine.nhs.uk/4505577104&category=NOOM&purpose=http://hl7.org/fhir/ConsentPolicy/opt-out|HRESCH
+<pre class="highlight"><code><span class="err">GET {{include.base}}{{include.resource}}?https://nww.spine.nhs.uk/4505577104&category=NDOP&purpose=http://hl7.org/fhir/ConsentPolicy/opt-out|HRESCH
 </span></code>
-Return {{include.resource}} resource that has a patient value of {{include.text1}} a category of {{include.text2}} and an  opt-out of {{include.text3}}</pre>
+Return {{include.resource}} resource that has a patient reference of {{include.nhsno}} a category of {{include.text2}} and an  opt-out of {{include.text3}}</pre>
 </div>
+
+<p>See <a href="https://www.hl7.org/fhir/searchparameter-registry.html">reference</a> for details on this parameter.</p>

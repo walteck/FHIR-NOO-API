@@ -10,13 +10,13 @@ summary: "low level details for the care connect patient 'id' element"
 
 ### Element Usage ###
 
-National Opt-Out uses the Consent.id element to store a universal unique identification (UUID) to each consent record that is created. Every new consent instance that is created using the National Opt-Out service will be allocated a UUID to identify that record and will retain that UUID throughout the lifespan of the instance. Depending on the opt-out preferences set by the patient, they may have 1 or 2 instances. Where no preferences have been set by the patient, a instance will not exist.
+National Data Opt-out uses the Consent.id element to store a universal unique identification (UUID) to each consent record that is created. Every new consent instance that is created using the National Data Opt-out service will be allocated a UUID to identify that record and will retain that UUID throughout the lifespan of the instance. Depending on the opt-out preferences set by the patient, they may have 1 or 2 instances. Where no preferences have been set by the patient, a instance will not exist.
 
 ### id ###
 
 |Name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
-|id| string | A unique logical identifier (UUID) allocated by the National Opt-Out model.|
+|id| string | A unique logical identifier (UUID) allocated by the National Data Opt-out model.|
 
 - 'id' **MUST** be used to uniquely identify a consent instance. This is the primary identifier for a patients consent preferences.
 

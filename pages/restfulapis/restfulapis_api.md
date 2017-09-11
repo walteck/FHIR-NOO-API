@@ -14,7 +14,7 @@ summary: Overview
 
 **XML Example 1**
 
-The example below demonstrates the structure of a constructed XML body that can be submitted to the National Opt-Out service via a HTTP POST RESTful command where both opt-out questions are stored in one XML body.
+The example below demonstrates the structure of a constructed XML body that can be submitted to the National Data Opt-out service via a HTTP POST RESTful command where both opt-out questions are stored in one XML body.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -31,7 +31,7 @@ The example below demonstrates the structure of a constructed XML body that can 
 	<category>
 		<coding>
 			<system value="https://fhir.nhs.uk/ValueSet/noom-category-type-1"/>
-			<code value="NOOM"/>
+			<code value="NDOP"/>
 		</coding>
 	</category>
     <patient>
@@ -74,7 +74,7 @@ The example below demonstrates the structure of a constructed XML body that can 
 	<category>
 		<coding>
 			<system value="https://fhir.nhs.uk/ValueSet/noom-category-type-1"/>
-			<code value="NOOM"/>
+			<code value="NDOP"/>
 		</coding>
 	</category>
     <patient>
@@ -116,7 +116,7 @@ The example below demonstrates the structure of a constructed XML body that can 
 	<category>
 		<coding>
 			<system value="https://fhir.nhs.uk/ValueSet/noom-category-type-1"/>
-			<code value="NOOM"/>
+			<code value="NDOP"/>
 		</coding>
 	</category>
     <patient>
@@ -148,6 +148,6 @@ The example below demonstrates the structure of a constructed XML body that can 
 {% include custom/post.op.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content2="POST" %}
 
 
-{% include custom/get.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content2="GET" text1="783ffeef-538e-4a17-bed2-983a382ccdd7" text2="NOOM" %}
+{% include custom/get.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content2="GET" text1="783ffeef-538e-4a17-bed2-983a382ccdd7" text2="NDOP" %}
 
 {% include custom/put.consent.html base="https://fhir.nhs.uk/StructureDefinition/" resource="consent" content2="PUT" text1="783ffeef-538e-4a17-bed2-983a382ccdd7" %}

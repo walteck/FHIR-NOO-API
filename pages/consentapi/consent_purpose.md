@@ -4,55 +4,57 @@ keywords: purpose, consent
 tags: [profile,element,purpose]
 sidebar: overview_sidebar
 permalink: consent_purpose.html
-summary: "low level details for the National Opt-Out 'purpose' element"
+summary: "low level details for the National Data Opt-out 'purpose' element"
 ---
-
-## id Implementation Guide ##
-
-### Use case ###
-
-This specification describes a single use case.
 
 ### Element Usage ###
 
-purpose uses the Consent.purpose element TODO...........
+purpose uses the Consent.purpose element to set the opt-out preferences that the patient has chosen. 
 
 ### status ###
 
 |name|Data Type|Description|
 | ------------- | ------------- | ------------- | ------------- |
-|purpose|Coding  | TODO|
+|purpose|Coding| The code used to identify which national data opt-out has been enabled|
 
 
 Example of correct usage
 
 |Usage| Element| examples| Comments|
-|![Tick](images/tick.png)|`purpose`| TODO| Enter text here|
+|![Tick](images/tick.png)|`purpose`| RESCH|A consent record record exists for research and planning. |
 
 Examples of incorrect usage
 
 |Usage| Element| examples| Comments|
-|![Cross](images/cross.png)|`purpose`| TODO|Enter text here|
+|![Cross](images/cross.png)|`purpose`| HRESCH|This code is not valid when used with the https://fhir.nhs.uk/ValueSet/ndop-preferences-1 valueset|
 
 
-On the wire XML example
+XML example
 
 ```xml
-TODO
+    <purpose>
+        <system value="https://fhir.nhs.uk/ndop-preference-codes-1"/>
+        <code value="RESCH"/>
+        <display value="healthcare research"/>
+    </purpose>
 ```
 
-On the wire example in JSON
+JSON example
 
 ```json
-TODO
+{
+  "purpose": [
+	{
+    "system": "https://fhir.nhs.uk/ndop-preference-codes-1",
+    "code": "RESCH",
+    "display": "healthcare research"
+  }
+ ]
+}
 ```
-
 *Error Handling*
 
-The provider system SHALL return an error if:
-
-- the `purpose` is invalid (i.e. fails NHS Number format and check digit tests).
-- the `purpose` is not associated with a NHS Number Status Indicator Code
+HTTP response codes will determine the success or failure of the POST operation. No element specific codes will be generated upon failure to POST.
 
 
 

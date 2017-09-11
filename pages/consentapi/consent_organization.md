@@ -1,73 +1,59 @@
 ---
 title: organization Element
-keywords: orgnaization, patient
-tags: [profile,element,id]
+keywords: orgnaization
+tags: [profile,element,organization]
 sidebar: profiles_sidebar
 permalink: consent_organization.html
-summary: "low level details for the care connect patient 'organziation' element"
+summary: "low level details for the National Data Opt-out 'organization' element"
 ---
-**TODO**
-
-This specification describes a single use case. 
 
 ### Element Usage ###
 
-TODO
+National Data Opt-out uses consent.organization to capture the custodian organization that manages the consent. This will be a fixed value of NHS Digital.
 
-### Enter element here!!! ###
+### organization ###
 
-|Type|name|Data Type|Description|
-| ------------- | ------------- | ------------- | ------------- |
-| Slice| identifier| Identifier | A unique national and/or local identifier for a patient |
-|Complex| ||| |
-|Extension||| |
-
-- 'nhsNumber' **MUST** be used where available. This is the primary identifier for a patient registered with a GP practice geographically 
-- a
-- a
+|Element Type| Data Type| Description|
+| ------------- | ------------- | ------------- |
+| code| url |The custodian organization|
 
 
-### Enter extensions here!! ###
+Example of correct usage
 
+|Usage| Element| examples| Comments|
+|![Tick](images/tick.png)|`organization`|https://clinicals.spineservices.nhs.uk/X26|Organization should have a fixed value of 'X26' which is the ODS code for NHS Digital|
 
+Examples of incorrect usage
 
-```http
-enter extensions url here!!
-```
+|Usage| Element| examples| Comments|
+|![Cross](images/cross.png)|`organization`|NHS Choices |https://demographics.spineservices.nhs.uk/E123123|Custodian cannot be a GP practice code|
 
-Consumers SHALL use the NHS Number Verification Status where `nhsNumber` is used as the primary patient identifier.
-
-The extensions uses the following valueset:
-
-```http
-Enter valuesets here!!
-```
-Links to valuesets here!!
-
-Valueset table here if viable!!
 
 On the wire XML example
 
+XML example
+
 ```xml
-xml example here!!
+    <organization>
+    	<reference value="https://demographics.spineservices.nhs.uk/X26"/>
+    </organization>
 ```
 
-On the wire example in JSON
+JSON example
 
 ```json
-JSON example here!!
+{
+  "organization": [
+	{
+      "reference": "https://clinicals.spineservices.nhs.uk/X26"
+  }
+ ]
+}
 ```
 
 *Error Handling*
 
-The provider system SHALL return an error if:
-
-error here!!
-
-## RESTful Usage ##
-
-
-Examples
+HTTP response codes will determine the success or failure of the POST operation. No element specific codes will be generated upon failure to POST.
 
 
 
