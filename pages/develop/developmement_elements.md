@@ -4,18 +4,18 @@ keywords: elements, consent
 tags: [profile,elements,usage]
 sidebar: overview_sidebar
 permalink: development_elements.html
-summary: "Implentation guide on the characteristics and usage of the profiles elements"
+summary: "Implementation guide on the characteristics and usage of the profiles elements"
 ---
 
 ## Consent Profile Elements ##
 
 |Name|Data Type|Card|Description|Value|
 |----|---------|----|-----------|-----|
-|[`id`](consent_id.html)|token|1..1|Logical id assigned by the FHIR server|Any UUID|
+|[`id`](consent_id.html)|string|1..1|Logical id assigned by the FHIR server|Any UUID|
 |[`status`](consent_status.html)|string|1..1|The current status of the consent instance|active,inactive|
 |[`category`](consent_category.html)|string|1..1|Category uses the Consent.category element to distinguish the national opt-out consent instances from any other consent instance|NDOP|
 |[`patient`](consent_patient.html)|Reference|1..1|Spine reference to the patients NHS number traced from PDS|
-|`dateTime`|dateTime|1..1|Date and time instance was last updated|Date+Time+TimeZone|
+|[`dateTime`](consent_datetime.html)|dateTime|1..1|Date and time instance was last updated|Date+Time+TimeZone|
 |[`actor`](consent_actor.html)|backbone|1..*|Captures the patient or healthcare professional who controls the consent|N/A|
 |`actor.role`|CodeableConcept|1..1|Valueset for the role|INF=informant|
 |`actor.reference`|Reference|1..1|URL for the actor|
